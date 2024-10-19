@@ -1,0 +1,1799 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_server" xml:lang="en-US">
+<title>Server Class Reference</title>
+<indexterm><primary>Server</primary></indexterm>
+Collaboration diagram for Server:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_server__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_server_1a70bb0a891c288abe65b9126e7f309660">initialize</link> ()</para>
+
+<para>The function class the method <link linkend="_class_server_1a2dd85c9db18b18d6e5cfb9584821e2e4">Server.initializeUseServerCFG()</link>, which parse &apos;docs/server.cfg&apos;. Then it declare and preinitialize some vars. Then the method declare datastructures like FileHandler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a2dd85c9db18b18d6e5cfb9584821e2e4">initializeUseServerCFG</link> (String[] cfStrings)</para>
+
+<para>This function become called by <link linkend="_class_server_1a70bb0a891c288abe65b9126e7f309660">Server.initialize()</link>. Then the function will parse &apos;docs/server.cfg&apos; with calling FileHandler. Then the called FileHandler method will return a array of rooms, or users, or messages to this function. Than this function will safe the data in the array of rooms, users, or messages. This function initialise data like position and size too. Parsed data: rooms, users, directChats, directMessage, <link linkend="_class_message">Message</link>, frameTitle, frameHeigth, frameWidth, frameX, frameY, frameMenuBarItem, frameMenuBarItem_QUIT, adress, framePanelRoomsHeigth, framePanelRoomsWidth, framePanelLogsHeigth, framePanelLogsHeigth, framePanelUsersHeigth, framePanelUsersWidth. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1ace0ce586af36c8024040a43db4054ab7">run</link> ()</para>
+
+<para>This function starts the two threads, which are safed in <link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">Server.serverGUI</link> and in <link linkend="_class_server_1adb68483b2656a697e48dd264e67d7875">Server.serverConntenctionListener</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a0029dd5aa6f144cbff55f807cd9c28b6">connectionListener</link> ()</para>
+
+<para>This function contains a thread. This thread waits in the try-catch block for the server socket to be accepted by establishing a connection. The connection is stored in a temporary socket. The login process with the client takes place via this thread. Than the function calls the method <link linkend="_class_server_1a59cfbf7deacd632b6e51aaad5023ef53">Server.getUserIdentity()</link>. The called method returns the index of the account. Than the socket of the user with the index become copied into the user-socket. Than the client will communicate with an Instance of the type <link linkend="_class_user">User</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a59cfbf7deacd632b6e51aaad5023ef53">getUserIdentity</link> (String username, String password)</para>
+
+<para>This function traverses the stored accounts (users). The method User.checkIdendity() is always used to check whether the login data is stored. If yes, the index of the account is returned. If not, a new account is created and the index of the new account is returned. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1aec95016edd6070d9edc96de0f1b0822d">serverGUI</link> ()</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a9f0543907a574d052339d4ba3dafcb89">serverGUI_JPanel_Log_repaint</link> ()</para>
+
+<para>do graphical Stuff </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a860065d2441b0aaf78e9d5c44f4cb8d0">serverGUI_JPanel_Users_repaint</link> ()</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a70bb6f9194edc357d437f0113912f675">serverDirectChat</link> (int idx)</para>
+
+<para>This method generate a new Frame. This frame contains an input dialog, to send a direct chat message to the user. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a62a34b38f1ed270ec60a6a89f97d78b9">serverGUI_JPanel_Rooms_repaint</link> ()</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>JScrollPane <link linkend="_class_server_1ae3fb5eba012e7113c3e3abfcc784c4f5">createScrollPane</link> ()</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a87bf0eefe6145205a511b876a9c38bf3">serverAddMessage</link> (<link linkend="_class_message">Message</link> message, int room)</para>
+
+<para>This server adds a message into a room. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1ad78a971133bcaacfadaeb4b968a347b9">serverAddRoom</link> (<link linkend="_class_room">Room</link> room)</para>
+
+<para>This server adds a new <link linkend="_class_room">Room</link> to the server. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a353352900b62dc47d33e83dff929f792">serverAddUser</link> (<link linkend="_class_user">User</link> user, String password)</para>
+
+<para>This method adds a new User-Account to the server. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1ac41b9cd2359cbae949bc0525333dcc94">serverGetNewRoomIdx</link> ()</para>
+
+<para>This method gets the highest index of the rooms. Than the highest index incremented by 1 become the index for a new room. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a52d24c041dc4f55ba76e32071397a640">serverAppendToFile</link> (int mode, String content)</para>
+
+<para>This method class <link linkend="_class_my_file_handler_1aab8e28ac01f6eeb9434477d907c27dac">MyFileHandler.appendToFile()</link> to append an entry into a file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a121ea9cf2ead4af53104a0f4fda5cbbb">serverDelRoom</link> (int idx)</para>
+
+<para>This method removes a romm from the class var. Than the method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. This deletes the entry with the selected room. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1ae9b4b49c79dd32bd0a77476ae4be3447">serverEdtRoom</link> (int idx, String content1, String content2)</para>
+
+<para>This method edit an existing room. The data of one room become reinitialised. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a0280a3475a460ad6c00c07efe714e347">serverAddLog</link> (int user, String content)</para>
+
+<para>This method. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1ab4a699311a4a857bf8c91492a13aad8b">serverAddDirectChatMessage</link> (int idx, int idx1, int idx2, String content)</para>
+
+<para>This adds a direct-chat-message into Server.directsChats and calls MyFileHandler.serverAppendToFile(). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1ad1f0d9b5cc78393a45619c293bbeb477">serverAddDirectChat</link> (String title, int idx, int idxU)</para>
+
+<para>This method adds a new Direct-Chat to <link linkend="_class_server_1a03f395470203615bbdd9e50cb358a5fe">Server.directChats</link> and calls MyFileHandler.serverAppendToFile(). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a8096777938769b5b77a1261d14e26247">serverUserVerwarnen</link> (int idx)</para>
+
+<para>This method warns a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1add1e3364d45cf8e4d623c2d6188dbb15">serverUserVerwarnen</link> (int idx, String content)</para>
+
+<para>This method warns a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a105520b8bef441b4798f951332230dd9">serverUserKick</link> (int idx)</para>
+
+<para>This method kicks a user from the server. The Method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a274c8583ba6436fe164a78a4300f9808">serverUserBan</link> (int idx)</para>
+
+<para>This server bans a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a9a0c146769b7c80c51955611095b3902">getNumOfUsers</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_user">User</link> <link linkend="_class_server_1a956d4b04fb12a34d9f5e5f35cda516d7">getUser</link> (int idx)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a781efcec47a62e04e6b8c6cc0445d701">getNumOfRooms</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_room">Room</link> <link linkend="_class_server_1af6e5cf0b93134ee6388afe7f7902d6e4">getRoom</link> (int idx)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1addfa3c004ba9fd945b9fcdbd899b5cc3">getNumOfDirectChat</link> ()</para>
+</listitem>
+            <listitem><para>DirectChat <link linkend="_class_server_1abfce95ab6b3454cb0c2ef243d0de1a7e">getDirectChat</link> (int idx)</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_server_1ae522a69da11748efcb777f4ed51ff428">getIsUpdate</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1aa10424873b170622c9c6d5a20f7f15d4">setIsUpdate</link> ()</para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_user">User</link> &gt; <link linkend="_class_server_1acae62cae11d9d470698a84ef9c7faa37">getUsers</link> ()</para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_room">Room</link> &gt; <link linkend="_class_server_1acdb2474ea3ba4379899bd90235765e2d">getRooms</link> ()</para>
+</listitem>
+            <listitem><para>ArrayList&lt; DirectChat &gt; <link linkend="_class_server_1a537f73dfa97e30a9fbc2acf8110b6cda">getDirectChats</link> ()</para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_message">Message</link> &gt; <link linkend="_class_server_1ad0d70665f01a53ec5b4a7aeed78136af">getMessages</link> (int k)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static String <link linkend="_class_server_1ad1b00c7368d14c012b9cce517b6c4926">getDate</link> ()</para>
+
+<para>This method returns the current Date in String format. </para>
+</listitem>
+            <listitem><para>static String <link linkend="_class_server_1a26fe775536645c7a12d515ee216b2dc7">getTime</link> ()</para>
+
+<para>This method returns the current time in String format. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_server_1aa3fbc6151e35b67da9fc169408539cf6">main</link> (String[] args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>JLabel <link linkend="_class_server_1aae25d1c8f9febea4e9ae7f59fd86eb41">createHeaderLabel</link> ()</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>JPanel <link linkend="_class_server_1a2f8112aad5f3ba646c361f2ac829f32f">createLinePanel</link> (String labelText)</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>JPanel <link linkend="_class_server_1a605c16c18206695c45dae389f4769a7f">createPanel</link> (String labelText, int width, int height)</para>
+
+<para>do graphical stuff </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_server_1a9a5e10676dc736563679df92cb1ef24c">addPanelToContent</link> (JPanel content, JPanel panel, GridBagConstraints gbc, int gridx, int gridy)</para>
+
+<para>do graphical Stuff </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ServerSocket <link linkend="_class_server_1a24129ae964202c8df4ecccdb97080b0c">server</link></para>
+</listitem>
+            <listitem><para>Socket <link linkend="_class_server_1a559af32c66acfe2bbf1aec1fcb960fb5">socket</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_server_1a52987f6cdf28216379306bddc9e788ce">serverRun</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a91db4267ecd6153ed655cabdf506b75e">port</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1ac6e7c56a590697ce2cfd50795a8158ca">adress</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_my_file_handler">MyFileHandler</link> <link linkend="_class_server_1aeaa1d91b7bd4c95638816215b9d7331b">fileHandler</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1a3bcd7adb60f2c930fc42479cfe319c66">pathToUsers</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1a9d8592da5641e48ebc2f1cc95430cd11">pathToRooms</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1ad2abf417065e996b1230461e77dd4a3a">pathToMessages</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1a1667baf6db7e0d934147395137b078ce">pathToLog</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_user">User</link> &gt; <link linkend="_class_server_1af33e26acccf697cb7d0dce3944334288">users</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_room">Room</link> &gt; <link linkend="_class_server_1af41e7aae796bdf0b252753275badde05">rooms</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; DirectChat &gt; <link linkend="_class_server_1a03f395470203615bbdd9e50cb358a5fe">directChats</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_log">Log</link> &gt; <link linkend="_class_server_1a5aa86fa47749046de1042d1c0a9d2db3">logs</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1a3ac21b03022fd98fa2d21642f8a11485">pathToDirectChat</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1a6fbe8ed4d781a5e094873425ca7f3fb4">pathToDirectMessage</link></para>
+</listitem>
+            <listitem><para>Thread <link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">serverGUI</link></para>
+</listitem>
+            <listitem><para>Thread <link linkend="_class_server_1adb68483b2656a697e48dd264e67d7875">serverConntenctionListener</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_server_1a5546934f09232f5a67fa5f3dcc0246c9">serverUpdate</link></para>
+</listitem>
+            <listitem><para>JFrame <link linkend="_class_server_1a56b8c50b29b6cb2186875d110c7d56b9">mainFrame</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_server_1aa857d47799e5cf3c3c93f6838261cc96">mainFrameTitle</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1afbb2367d931881d8302e840485f699c5">mainFrameWidth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1aceb8edf5322f10a2f88ce6ef8910e2d7">mainFrameHeigth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1aa104dd24cc92846148276053b42056d1">mainFrameX</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a07f86e671429847971e8cd0af5386fbd">mainFrameY</link></para>
+</listitem>
+            <listitem><para>JMenu <link linkend="_class_server_1a6e8512182f497e17318fea844b886ec9">mainFrameMenu</link></para>
+</listitem>
+            <listitem><para>JMenuBar <link linkend="_class_server_1a797490ef032cfe1a679b242a61af5e29">mainFrameMenuBar</link></para>
+</listitem>
+            <listitem><para>JMenuItem <link linkend="_class_server_1a28d7ee7c093a0b170a276a3c21c6718a">mainFrameMenuBarItem_QUIT</link></para>
+</listitem>
+            <listitem><para>JPanel <link linkend="_class_server_1ae4ad12c127ed23061abb2f08f29eb2ff">mainFrameJPanelRooms</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a698064046c9762c0b39af882d1d75bf8">mainFrameJPanelRoomsHeigth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a4a3bbece95c871dfb23adae40d185129">mainFrameJPanelRoomsWidth</link></para>
+</listitem>
+            <listitem><para>JPanel <link linkend="_class_server_1a12172715a6e0b8c68b28d2d1174f3fb8">mainFrameJPanelUsers</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a336804867666b300098ba8257be17569">mainFrameJPanelUsersHeigth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a726dc02d85a6cc5f9f5320cff414adfe">mainFrameJPanelUsersWidth</link></para>
+</listitem>
+            <listitem><para>JPanel <link linkend="_class_server_1a53ab834c4aa0a9e628e74a4a7f6c28a4">mainFrameJPanelLog</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a3a264e29e815ca5cff23ba237aae2792">mainFrameJPanelLogHeigth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a9c8e31ffc3872223b443f80bc62b2f52">mainFrameJPanelLogWidth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a01266c094ee91f0b09de1ebc2e26a527">mainFrameHeadLineDimension</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a2f5876ca7704f864ce62765bbfba2d3e">mainFrameRoomnameDimension</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_server_1a72f8ba78e0687141de35591bac077b75">serverSitzung</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_server_1a9a5e10676dc736563679df92cb1ef24c"/><section>
+    <title>addPanelToContent()</title>
+<indexterm><primary>addPanelToContent</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>addPanelToContent</secondary></indexterm>
+<para><computeroutput>void Server.addPanelToContent (JPanel content, JPanel panel, GridBagConstraints gbc, int gridx, int gridy)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>do graphical Stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>panel</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>gbc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>gridx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>gridy</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a0029dd5aa6f144cbff55f807cd9c28b6"/><section>
+    <title>connectionListener()</title>
+<indexterm><primary>connectionListener</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>connectionListener</secondary></indexterm>
+<para><computeroutput>void Server.connectionListener ( )</computeroutput></para><para>
+
+<para>This function contains a thread. This thread waits in the try-catch block for the server socket to be accepted by establishing a connection. The connection is stored in a temporary socket. The login process with the client takes place via this thread. Than the function calls the method <link linkend="_class_server_1a59cfbf7deacd632b6e51aaad5023ef53">Server.getUserIdentity()</link>. The called method returns the index of the account. Than the socket of the user with the index become copied into the user-socket. Than the client will communicate with an Instance of the type <link linkend="_class_user">User</link>. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1aae25d1c8f9febea4e9ae7f59fd86eb41"/><section>
+    <title>createHeaderLabel()</title>
+<indexterm><primary>createHeaderLabel</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>createHeaderLabel</secondary></indexterm>
+<para><computeroutput>JLabel Server.createHeaderLabel ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix <?linebreak?></para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a2f8112aad5f3ba646c361f2ac829f32f"/><section>
+    <title>createLinePanel()</title>
+<indexterm><primary>createLinePanel</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>createLinePanel</secondary></indexterm>
+<para><computeroutput>JPanel Server.createLinePanel (String labelText)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>labelText</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a605c16c18206695c45dae389f4769a7f"/><section>
+    <title>createPanel()</title>
+<indexterm><primary>createPanel</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>createPanel</secondary></indexterm>
+<para><computeroutput>JPanel Server.createPanel (String labelText, int width, int height)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>labelText</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>width</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>height</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1ae3fb5eba012e7113c3e3abfcc784c4f5"/><section>
+    <title>createScrollPane()</title>
+<indexterm><primary>createScrollPane</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>createScrollPane</secondary></indexterm>
+<para><computeroutput>JScrollPane Server.createScrollPane ( )</computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix <?linebreak?></para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1ad1b00c7368d14c012b9cce517b6c4926"/><section>
+    <title>getDate()</title>
+<indexterm><primary>getDate</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getDate</secondary></indexterm>
+<para><computeroutput>static String Server.getDate ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>This method returns the current Date in String format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1abfce95ab6b3454cb0c2ef243d0de1a7e"/><section>
+    <title>getDirectChat()</title>
+<indexterm><primary>getDirectChat</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getDirectChat</secondary></indexterm>
+<para><computeroutput>DirectChat Server.getDirectChat (int idx)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a537f73dfa97e30a9fbc2acf8110b6cda"/><section>
+    <title>getDirectChats()</title>
+<indexterm><primary>getDirectChats</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getDirectChats</secondary></indexterm>
+<para><computeroutput>ArrayList&lt; DirectChat &gt; Server.getDirectChats ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1ae522a69da11748efcb777f4ed51ff428"/><section>
+    <title>getIsUpdate()</title>
+<indexterm><primary>getIsUpdate</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getIsUpdate</secondary></indexterm>
+<para><computeroutput>boolean Server.getIsUpdate ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1ad0d70665f01a53ec5b4a7aeed78136af"/><section>
+    <title>getMessages()</title>
+<indexterm><primary>getMessages</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getMessages</secondary></indexterm>
+<para><computeroutput>ArrayList&lt; <link linkend="_class_message">Message</link> &gt; Server.getMessages (int k)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>k</entry><entry>
+<para>balblacar </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1addfa3c004ba9fd945b9fcdbd899b5cc3"/><section>
+    <title>getNumOfDirectChat()</title>
+<indexterm><primary>getNumOfDirectChat</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getNumOfDirectChat</secondary></indexterm>
+<para><computeroutput>int Server.getNumOfDirectChat ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a781efcec47a62e04e6b8c6cc0445d701"/><section>
+    <title>getNumOfRooms()</title>
+<indexterm><primary>getNumOfRooms</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getNumOfRooms</secondary></indexterm>
+<para><computeroutput>int Server.getNumOfRooms ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a9a0c146769b7c80c51955611095b3902"/><section>
+    <title>getNumOfUsers()</title>
+<indexterm><primary>getNumOfUsers</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getNumOfUsers</secondary></indexterm>
+<para><computeroutput>int Server.getNumOfUsers ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1af6e5cf0b93134ee6388afe7f7902d6e4"/><section>
+    <title>getRoom()</title>
+<indexterm><primary>getRoom</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getRoom</secondary></indexterm>
+<para><computeroutput><link linkend="_class_room">Room</link> Server.getRoom (int idx)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1acdb2474ea3ba4379899bd90235765e2d"/><section>
+    <title>getRooms()</title>
+<indexterm><primary>getRooms</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getRooms</secondary></indexterm>
+<para><computeroutput>ArrayList&lt; <link linkend="_class_room">Room</link> &gt; Server.getRooms ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a26fe775536645c7a12d515ee216b2dc7"/><section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput>static String Server.getTime ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>This method returns the current time in String format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a956d4b04fb12a34d9f5e5f35cda516d7"/><section>
+    <title>getUser()</title>
+<indexterm><primary>getUser</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getUser</secondary></indexterm>
+<para><computeroutput><link linkend="_class_user">User</link> Server.getUser (int idx)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a59cfbf7deacd632b6e51aaad5023ef53"/><section>
+    <title>getUserIdentity()</title>
+<indexterm><primary>getUserIdentity</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getUserIdentity</secondary></indexterm>
+<para><computeroutput>int Server.getUserIdentity (String username, String password)</computeroutput></para><para>
+
+<para>This function traverses the stored accounts (users). The method User.checkIdendity() is always used to check whether the login data is stored. If yes, the index of the account is returned. If not, a new account is created and the index of the new account is returned. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1acae62cae11d9d470698a84ef9c7faa37"/><section>
+    <title>getUsers()</title>
+<indexterm><primary>getUsers</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>getUsers</secondary></indexterm>
+<para><computeroutput>ArrayList&lt; <link linkend="_class_user">User</link> &gt; Server.getUsers ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a70bb0a891c288abe65b9126e7f309660"/><section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput>void Server.initialize ( )</computeroutput></para><para>
+
+<para>The function class the method <link linkend="_class_server_1a2dd85c9db18b18d6e5cfb9584821e2e4">Server.initializeUseServerCFG()</link>, which parse &apos;docs/server.cfg&apos;. Then it declare and preinitialize some vars. Then the method declare datastructures like FileHandler. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Felix Staacke</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a2dd85c9db18b18d6e5cfb9584821e2e4"/><section>
+    <title>initializeUseServerCFG()</title>
+<indexterm><primary>initializeUseServerCFG</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>initializeUseServerCFG</secondary></indexterm>
+<para><computeroutput>void Server.initializeUseServerCFG (String[] cfStrings)</computeroutput></para><para>
+
+<para>This function become called by <link linkend="_class_server_1a70bb0a891c288abe65b9126e7f309660">Server.initialize()</link>. Then the function will parse &apos;docs/server.cfg&apos; with calling FileHandler. Then the called FileHandler method will return a array of rooms, or users, or messages to this function. Than this function will safe the data in the array of rooms, users, or messages. This function initialise data like position and size too. Parsed data: rooms, users, directChats, directMessage, <link linkend="_class_message">Message</link>, frameTitle, frameHeigth, frameWidth, frameX, frameY, frameMenuBarItem, frameMenuBarItem_QUIT, adress, framePanelRoomsHeigth, framePanelRoomsWidth, framePanelLogsHeigth, framePanelLogsHeigth, framePanelUsersHeigth, framePanelUsersWidth. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cfStrings</entry><entry>
+<para>: String[] </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1aa3fbc6151e35b67da9fc169408539cf6"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void Server.main (String[] args)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1ace0ce586af36c8024040a43db4054ab7"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>void Server.run ( )</computeroutput></para><para>
+
+<para>This function starts the two threads, which are safed in <link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">Server.serverGUI</link> and in <link linkend="_class_server_1adb68483b2656a697e48dd264e67d7875">Server.serverConntenctionListener</link>. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Date</title>
+
+<para>16.10.2024 (normalerweise das letzte Edit-date, hier exemplarisch das heutige Datum) </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1ad1f0d9b5cc78393a45619c293bbeb477"/><section>
+    <title>serverAddDirectChat()</title>
+<indexterm><primary>serverAddDirectChat</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddDirectChat</secondary></indexterm>
+<para><computeroutput>void Server.serverAddDirectChat (String title, int idx, int idxU)</computeroutput></para><para>
+
+<para>This method adds a new Direct-Chat to <link linkend="_class_server_1a03f395470203615bbdd9e50cb358a5fe">Server.directChats</link> and calls MyFileHandler.serverAppendToFile(). </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>title</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>idxU</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1ab4a699311a4a857bf8c91492a13aad8b"/><section>
+    <title>serverAddDirectChatMessage()</title>
+<indexterm><primary>serverAddDirectChatMessage</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddDirectChatMessage</secondary></indexterm>
+<para><computeroutput>void Server.serverAddDirectChatMessage (int idx, int idx1, int idx2, String content)</computeroutput></para><para>
+
+<para>This adds a direct-chat-message into Server.directsChats and calls MyFileHandler.serverAppendToFile(). </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>idx1</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>idx2</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a0280a3475a460ad6c00c07efe714e347"/><section>
+    <title>serverAddLog()</title>
+<indexterm><primary>serverAddLog</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddLog</secondary></indexterm>
+<para><computeroutput>void Server.serverAddLog (int user, String content)</computeroutput></para><para>
+
+<para>This method. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>user</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a87bf0eefe6145205a511b876a9c38bf3"/><section>
+    <title>serverAddMessage()</title>
+<indexterm><primary>serverAddMessage</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddMessage</secondary></indexterm>
+<para><computeroutput>void Server.serverAddMessage (<link linkend="_class_message">Message</link> message, int room)</computeroutput></para><para>
+
+<para>This server adds a message into a room. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>message</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>room</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1ad78a971133bcaacfadaeb4b968a347b9"/><section>
+    <title>serverAddRoom()</title>
+<indexterm><primary>serverAddRoom</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddRoom</secondary></indexterm>
+<para><computeroutput>void Server.serverAddRoom (<link linkend="_class_room">Room</link> room)</computeroutput></para><para>
+
+<para>This server adds a new <link linkend="_class_room">Room</link> to the server. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>room</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a353352900b62dc47d33e83dff929f792"/><section>
+    <title>serverAddUser()</title>
+<indexterm><primary>serverAddUser</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAddUser</secondary></indexterm>
+<para><computeroutput>void Server.serverAddUser (<link linkend="_class_user">User</link> user, String password)</computeroutput></para><para>
+
+<para>This method adds a new User-Account to the server. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>user</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a52d24c041dc4f55ba76e32071397a640"/><section>
+    <title>serverAppendToFile()</title>
+<indexterm><primary>serverAppendToFile</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverAppendToFile</secondary></indexterm>
+<para><computeroutput>void Server.serverAppendToFile (int mode, String content)</computeroutput></para><para>
+
+<para>This method class <link linkend="_class_my_file_handler_1aab8e28ac01f6eeb9434477d907c27dac">MyFileHandler.appendToFile()</link> to append an entry into a file. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>mode</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a121ea9cf2ead4af53104a0f4fda5cbbb"/><section>
+    <title>serverDelRoom()</title>
+<indexterm><primary>serverDelRoom</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverDelRoom</secondary></indexterm>
+<para><computeroutput>void Server.serverDelRoom (int idx)</computeroutput></para><para>
+
+<para>This method removes a romm from the class var. Than the method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. This deletes the entry with the selected room. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a70bb6f9194edc357d437f0113912f675"/><section>
+    <title>serverDirectChat()</title>
+<indexterm><primary>serverDirectChat</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverDirectChat</secondary></indexterm>
+<para><computeroutput>void Server.serverDirectChat (int idx)</computeroutput></para><para>
+
+<para>This method generate a new Frame. This frame contains an input dialog, to send a direct chat message to the user. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><para><link linkend="_todo_1_todo000003">Todo</link> 
+<para>do not spawn a own Frame. Repaint the <link linkend="_class_server">Server</link> Main Frame. Show the dialog instead of the dashboard.</para>
+</para></para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>} else { content.add(new JLabel( &quot;Bisher kein Direktchat eröffnet. Klicke Knopf im neuen Chat zu öffnen!&quot;));</para>
+
+<para>JButton button = new JButton(&quot;Neuer Direktchat&quot;); button.addActionListener(new ActionListener() { @Override public void actionPerformed(ActionEvent e) { serverAddDirectChat(&quot;Server&quot; + users.get(idx).getUsername(), directChats.size(), idx); } });</para>
+
+<para>Füge den Button zum content Panel hinzu content.add(button); }</para>
+</section>
+<anchor xml:id="_class_server_1ae9b4b49c79dd32bd0a77476ae4be3447"/><section>
+    <title>serverEdtRoom()</title>
+<indexterm><primary>serverEdtRoom</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverEdtRoom</secondary></indexterm>
+<para><computeroutput>void Server.serverEdtRoom (int idx, String content1, String content2)</computeroutput></para><para>
+
+<para>This method edit an existing room. The data of one room become reinitialised. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content1</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content2</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1ac41b9cd2359cbae949bc0525333dcc94"/><section>
+    <title>serverGetNewRoomIdx()</title>
+<indexterm><primary>serverGetNewRoomIdx</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGetNewRoomIdx</secondary></indexterm>
+<para><computeroutput>int Server.serverGetNewRoomIdx ( )</computeroutput></para><para>
+
+<para>This method gets the highest index of the rooms. Than the highest index incremented by 1 become the index for a new room. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1aec95016edd6070d9edc96de0f1b0822d"/><section>
+    <title>serverGUI()</title>
+<indexterm><primary>serverGUI</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGUI</secondary></indexterm>
+<para><computeroutput>void Server.serverGUI ( )</computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix </para>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><para><link linkend="_todo_1_todo000002">Todo</link> 
+<para>reimplement the function </para>
+
+<para>implement one default dashboard </para>
+</para></para>
+</section>
+<anchor xml:id="_class_server_1a9f0543907a574d052339d4ba3dafcb89"/><section>
+    <title>serverGUI_JPanel_Log_repaint()</title>
+<indexterm><primary>serverGUI_JPanel_Log_repaint</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGUI_JPanel_Log_repaint</secondary></indexterm>
+<para><computeroutput>void Server.serverGUI_JPanel_Log_repaint ( )</computeroutput></para><para>
+
+<para>do graphical Stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix </para>
+
+<para>the other student</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a62a34b38f1ed270ec60a6a89f97d78b9"/><section>
+    <title>serverGUI_JPanel_Rooms_repaint()</title>
+<indexterm><primary>serverGUI_JPanel_Rooms_repaint</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGUI_JPanel_Rooms_repaint</secondary></indexterm>
+<para><computeroutput>void Server.serverGUI_JPanel_Rooms_repaint ( )</computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a860065d2441b0aaf78e9d5c44f4cb8d0"/><section>
+    <title>serverGUI_JPanel_Users_repaint()</title>
+<indexterm><primary>serverGUI_JPanel_Users_repaint</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGUI_JPanel_Users_repaint</secondary></indexterm>
+<para><computeroutput>void Server.serverGUI_JPanel_Users_repaint ( )</computeroutput></para><para>
+
+<para>do graphical stuff </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_server_1a274c8583ba6436fe164a78a4300f9808"/><section>
+    <title>serverUserBan()</title>
+<indexterm><primary>serverUserBan</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverUserBan</secondary></indexterm>
+<para><computeroutput>void Server.serverUserBan (int idx)</computeroutput></para><para>
+
+<para>This server bans a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a105520b8bef441b4798f951332230dd9"/><section>
+    <title>serverUserKick()</title>
+<indexterm><primary>serverUserKick</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverUserKick</secondary></indexterm>
+<para><computeroutput>void Server.serverUserKick (int idx)</computeroutput></para><para>
+
+<para>This method kicks a user from the server. The Method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1a8096777938769b5b77a1261d14e26247"/><section>
+    <title>serverUserVerwarnen()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>serverUserVerwarnen</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverUserVerwarnen</secondary></indexterm>
+<para><computeroutput>void Server.serverUserVerwarnen (int idx)</computeroutput></para><para>
+
+<para>This method warns a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1add1e3364d45cf8e4d623c2d6188dbb15"/><section>
+    <title>serverUserVerwarnen()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>serverUserVerwarnen</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverUserVerwarnen</secondary></indexterm>
+<para><computeroutput>void Server.serverUserVerwarnen (int idx, String content)</computeroutput></para><para>
+
+<para>This method warns a user. The method <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> become called. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_server_1aa10424873b170622c9c6d5a20f7f15d4"/><section>
+    <title>setIsUpdate()</title>
+<indexterm><primary>setIsUpdate</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>setIsUpdate</secondary></indexterm>
+<para><computeroutput>void Server.setIsUpdate ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_server_1ac6e7c56a590697ce2cfd50795a8158ca"/><section>
+    <title>adress</title>
+<indexterm><primary>adress</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>adress</secondary></indexterm>
+<para><computeroutput>String Server.adress<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a03f395470203615bbdd9e50cb358a5fe"/><section>
+    <title>directChats</title>
+<indexterm><primary>directChats</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>directChats</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;DirectChat&gt; Server.directChats<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1aeaa1d91b7bd4c95638816215b9d7331b"/><section>
+    <title>fileHandler</title>
+<indexterm><primary>fileHandler</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>fileHandler</secondary></indexterm>
+<para><computeroutput><link linkend="_class_my_file_handler">MyFileHandler</link> Server.fileHandler<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a5aa86fa47749046de1042d1c0a9d2db3"/><section>
+    <title>logs</title>
+<indexterm><primary>logs</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>logs</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_log">Log</link>&gt; Server.logs<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a56b8c50b29b6cb2186875d110c7d56b9"/><section>
+    <title>mainFrame</title>
+<indexterm><primary>mainFrame</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrame</secondary></indexterm>
+<para><computeroutput>JFrame Server.mainFrame<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a01266c094ee91f0b09de1ebc2e26a527"/><section>
+    <title>mainFrameHeadLineDimension</title>
+<indexterm><primary>mainFrameHeadLineDimension</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameHeadLineDimension</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameHeadLineDimension<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1aceb8edf5322f10a2f88ce6ef8910e2d7"/><section>
+    <title>mainFrameHeigth</title>
+<indexterm><primary>mainFrameHeigth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameHeigth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameHeigth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a53ab834c4aa0a9e628e74a4a7f6c28a4"/><section>
+    <title>mainFrameJPanelLog</title>
+<indexterm><primary>mainFrameJPanelLog</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelLog</secondary></indexterm>
+<para><computeroutput>JPanel Server.mainFrameJPanelLog<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a3a264e29e815ca5cff23ba237aae2792"/><section>
+    <title>mainFrameJPanelLogHeigth</title>
+<indexterm><primary>mainFrameJPanelLogHeigth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelLogHeigth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelLogHeigth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a9c8e31ffc3872223b443f80bc62b2f52"/><section>
+    <title>mainFrameJPanelLogWidth</title>
+<indexterm><primary>mainFrameJPanelLogWidth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelLogWidth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelLogWidth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1ae4ad12c127ed23061abb2f08f29eb2ff"/><section>
+    <title>mainFrameJPanelRooms</title>
+<indexterm><primary>mainFrameJPanelRooms</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelRooms</secondary></indexterm>
+<para><computeroutput>JPanel Server.mainFrameJPanelRooms<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a698064046c9762c0b39af882d1d75bf8"/><section>
+    <title>mainFrameJPanelRoomsHeigth</title>
+<indexterm><primary>mainFrameJPanelRoomsHeigth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelRoomsHeigth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelRoomsHeigth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a4a3bbece95c871dfb23adae40d185129"/><section>
+    <title>mainFrameJPanelRoomsWidth</title>
+<indexterm><primary>mainFrameJPanelRoomsWidth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelRoomsWidth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelRoomsWidth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a12172715a6e0b8c68b28d2d1174f3fb8"/><section>
+    <title>mainFrameJPanelUsers</title>
+<indexterm><primary>mainFrameJPanelUsers</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelUsers</secondary></indexterm>
+<para><computeroutput>JPanel Server.mainFrameJPanelUsers<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a336804867666b300098ba8257be17569"/><section>
+    <title>mainFrameJPanelUsersHeigth</title>
+<indexterm><primary>mainFrameJPanelUsersHeigth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelUsersHeigth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelUsersHeigth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a726dc02d85a6cc5f9f5320cff414adfe"/><section>
+    <title>mainFrameJPanelUsersWidth</title>
+<indexterm><primary>mainFrameJPanelUsersWidth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameJPanelUsersWidth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameJPanelUsersWidth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a6e8512182f497e17318fea844b886ec9"/><section>
+    <title>mainFrameMenu</title>
+<indexterm><primary>mainFrameMenu</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameMenu</secondary></indexterm>
+<para><computeroutput>JMenu Server.mainFrameMenu<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a797490ef032cfe1a679b242a61af5e29"/><section>
+    <title>mainFrameMenuBar</title>
+<indexterm><primary>mainFrameMenuBar</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameMenuBar</secondary></indexterm>
+<para><computeroutput>JMenuBar Server.mainFrameMenuBar<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a28d7ee7c093a0b170a276a3c21c6718a"/><section>
+    <title>mainFrameMenuBarItem_QUIT</title>
+<indexterm><primary>mainFrameMenuBarItem_QUIT</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameMenuBarItem_QUIT</secondary></indexterm>
+<para><computeroutput>JMenuItem Server.mainFrameMenuBarItem_QUIT<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a2f5876ca7704f864ce62765bbfba2d3e"/><section>
+    <title>mainFrameRoomnameDimension</title>
+<indexterm><primary>mainFrameRoomnameDimension</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameRoomnameDimension</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameRoomnameDimension<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1aa857d47799e5cf3c3c93f6838261cc96"/><section>
+    <title>mainFrameTitle</title>
+<indexterm><primary>mainFrameTitle</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameTitle</secondary></indexterm>
+<para><computeroutput>String Server.mainFrameTitle<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1afbb2367d931881d8302e840485f699c5"/><section>
+    <title>mainFrameWidth</title>
+<indexterm><primary>mainFrameWidth</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameWidth</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameWidth<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1aa104dd24cc92846148276053b42056d1"/><section>
+    <title>mainFrameX</title>
+<indexterm><primary>mainFrameX</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameX</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameX<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a07f86e671429847971e8cd0af5386fbd"/><section>
+    <title>mainFrameY</title>
+<indexterm><primary>mainFrameY</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>mainFrameY</secondary></indexterm>
+<para><computeroutput>int Server.mainFrameY<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a3ac21b03022fd98fa2d21642f8a11485"/><section>
+    <title>pathToDirectChat</title>
+<indexterm><primary>pathToDirectChat</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToDirectChat</secondary></indexterm>
+<para><computeroutput>String Server.pathToDirectChat<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a6fbe8ed4d781a5e094873425ca7f3fb4"/><section>
+    <title>pathToDirectMessage</title>
+<indexterm><primary>pathToDirectMessage</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToDirectMessage</secondary></indexterm>
+<para><computeroutput>String Server.pathToDirectMessage<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a1667baf6db7e0d934147395137b078ce"/><section>
+    <title>pathToLog</title>
+<indexterm><primary>pathToLog</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToLog</secondary></indexterm>
+<para><computeroutput>String Server.pathToLog<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1ad2abf417065e996b1230461e77dd4a3a"/><section>
+    <title>pathToMessages</title>
+<indexterm><primary>pathToMessages</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToMessages</secondary></indexterm>
+<para><computeroutput>String Server.pathToMessages<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a9d8592da5641e48ebc2f1cc95430cd11"/><section>
+    <title>pathToRooms</title>
+<indexterm><primary>pathToRooms</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToRooms</secondary></indexterm>
+<para><computeroutput>String Server.pathToRooms<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a3bcd7adb60f2c930fc42479cfe319c66"/><section>
+    <title>pathToUsers</title>
+<indexterm><primary>pathToUsers</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>pathToUsers</secondary></indexterm>
+<para><computeroutput>String Server.pathToUsers<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a91db4267ecd6153ed655cabdf506b75e"/><section>
+    <title>port</title>
+<indexterm><primary>port</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>port</secondary></indexterm>
+<para><computeroutput>int Server.port<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1af41e7aae796bdf0b252753275badde05"/><section>
+    <title>rooms</title>
+<indexterm><primary>rooms</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>rooms</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_room">Room</link>&gt; Server.rooms<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a24129ae964202c8df4ecccdb97080b0c"/><section>
+    <title>server</title>
+<indexterm><primary>server</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>server</secondary></indexterm>
+<para><computeroutput>ServerSocket Server.server<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1adb68483b2656a697e48dd264e67d7875"/><section>
+    <title>serverConntenctionListener</title>
+<indexterm><primary>serverConntenctionListener</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverConntenctionListener</secondary></indexterm>
+<para><computeroutput>Thread Server.serverConntenctionListener<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a8671d10d89015c688c90f04e47cf80f8"/><section>
+    <title>serverGUI</title>
+<indexterm><primary>serverGUI</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverGUI</secondary></indexterm>
+<para><computeroutput>Thread Server.serverGUI<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a52987f6cdf28216379306bddc9e788ce"/><section>
+    <title>serverRun</title>
+<indexterm><primary>serverRun</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverRun</secondary></indexterm>
+<para><computeroutput>boolean Server.serverRun<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a72f8ba78e0687141de35591bac077b75"/><section>
+    <title>serverSitzung</title>
+<indexterm><primary>serverSitzung</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverSitzung</secondary></indexterm>
+<para><computeroutput>int Server.serverSitzung<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a5546934f09232f5a67fa5f3dcc0246c9"/><section>
+    <title>serverUpdate</title>
+<indexterm><primary>serverUpdate</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>serverUpdate</secondary></indexterm>
+<para><computeroutput>boolean Server.serverUpdate<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1a559af32c66acfe2bbf1aec1fcb960fb5"/><section>
+    <title>socket</title>
+<indexterm><primary>socket</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>socket</secondary></indexterm>
+<para><computeroutput>Socket Server.socket<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_server_1af33e26acccf697cb7d0dce3944334288"/><section>
+    <title>users</title>
+<indexterm><primary>users</primary><secondary>Server</secondary></indexterm>
+<indexterm><primary>Server</primary><secondary>users</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_user">User</link>&gt; Server.users<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Felix Staacke/Downloads/v_2_12/src/<link linkend="__server_8java">Server.java</link></section>
+</section>

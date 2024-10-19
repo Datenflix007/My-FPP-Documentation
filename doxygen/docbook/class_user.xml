@@ -1,0 +1,1328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_user" xml:lang="en-US">
+<title>User Class Reference</title>
+<indexterm><primary>User</primary></indexterm>
+Collaboration diagram for User:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_user__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_user_1ac58ae55790a70d27312cbcebd3d74be2">hashPassword</link> (String password)</para>
+
+<para>This method returns the hasvalue of the password. The <link linkend="_class_user">User</link> structure only safe the hashvalue, not the passwords. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">setIsOnline</link> (Socket socket, <link linkend="_class_server">Server</link> server)</para>
+
+<para>This method declares and initialises the both Threads <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. Than the method trys to copy the parameter-socket into the class-variable <link linkend="_class_user_1a3698f86316bcaaad6c1b927aabbf77ea">User.userSocket</link>. At last the method starts the two threads in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> will run the method User.sendToUser(). <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link> will run the method <link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">User.receiveFromClient()</link>. Al last, this method calls the method User.setIsUpdate(). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1a04c9b1223d6507da9eeec0b518bf6405">setIsOnline</link> ()</para>
+
+<para>set the var <link linkend="_class_user_1a72e6f95652a9c28a176952c98a14c5dd">User.userIsOnline</link> true </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1ad31fb44e6e337630cd17a14b9b3730d1">setIsOffline</link> ()</para>
+
+<para>This method interrupt the Thread userSender and userReceiver. Then the sockt connection to the client become closed. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">receiveFromClient</link> ()</para>
+
+<para>This method is saved as a lambda in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll. </para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1ab00a3725ff57fc30a3692ae62a04a28c">checkIdentity</link> (String username, String password)</para>
+
+<para>This method checks, if the entered login data equals the safed data. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1ae975e1fcd02e716e9ef51f79c259a2fb">getUsername</link> ()</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1adc0a352a5e5f804682d983191f45c524">getIsOnline</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1a90ce0afdad0d42bd1c49c763bbc1be52">setUserIsKicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1ab236a5d76711a0cb1f495a4b47a0655e">setUserIsBannd</link> ()</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a32124ad2aee1ea0a409f56b770d6d82f">getIsBanned</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1aaa76cbd1f8fe7c3a58b62bbb88fb60d4">getUserSeletedRoom</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1a77d0ba2972427793eb642b0594062acb">getUserKickCounter</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1af632bff30f08f3071fa4411f7ada25cd">getUserIdentity</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1a9d965e3bcc3a207272c1e8d5dc9416eb">getHashedPassword</link> ()</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1abb07b7b27987a3da9da8a0f1bce6b969">getIsVerwarnt</link> ()</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1aa9381e318df49c67e8c703848c0164a9">getIsKicked</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a79c1db56e87be54ac5b60acea7e089e2">getUserRegistrationDate</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a0c5cd70aab3b240ec374eb00d0e9e2ac">getUserRegistrationTime</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a5747db015828288696092c5355aca1d7">getUserLastLoginDate</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a1f3dda88d587340443fa2d0560592bfd">getUserLastLoginTime</link> ()</para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a42e5663ca72b56ac9e332b10fc675826">getUserIsBanned</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1a3fd081144eb72fa4dde91a4b7524cf1e">setUserIsVerwarned</link> (String str)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_user_1ac888dac0c02e9d169f6f3767c23f334c">setUserSelectedRoom</link> (int ridx)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static String <link linkend="_class_user_1a7f2808b54aa248f0cb55c054a517b4fd">getDate</link> ()</para>
+
+<para>This method returns the current date in a String format. </para>
+</listitem>
+            <listitem><para>static String <link linkend="_class_user_1a0ddfb19f7a18a54a823630a19341fb9f">getTime</link> ()</para>
+
+<para>This method returns the current time in a string format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_user_1a9928d17b174137d3d4b8acb68f514bbf">sendToClient</link> ()</para>
+
+<para>This method is saved as a lambda in <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_user_1a5699ebda8242215036b22e90e7dc5c1f">userID</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a3d78bd2c7b73463591173e09b9e8e40d">userUsername</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1a37005fb3d638e4059c7ccc8ada9503bc">userPasswordHash</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a72e6f95652a9c28a176952c98a14c5dd">userIsOnline</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1a59db114846fce82b375e77d0a369b2e0">userSelectedRoom</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a7ecbc77bda944dc18b4dcd263db257fb">userIsVerwarned</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a71a980b8abfdee45b26ed28e3ca9b013">userIsKicked</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_user_1abbf3338f25f50a559ca3714fbc4799d1">userIsKickedCounter</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_user_1a97dac87d3fc0347a41b6815a73a07925">userIsBanned</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a77a11366a6323051e5026c7e134ee424">userVerwarnung</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a2807efc8499db2e4f148f374c96a873d">userRegistrationDate</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1ae8143941284969b2d08863ae54c2d127">userRegistrationTime</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a0849a956e2da51a8291ecef767d1730e">userLastLoginDate</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_user_1a729ecad5b9aa885171ef50ae22acd8f1">userLastLoginTime</link></para>
+</listitem>
+            <listitem><para>Thread <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">userSender</link></para>
+</listitem>
+            <listitem><para>Thread <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">userReceiver</link></para>
+</listitem>
+            <listitem><para>Socket <link linkend="_class_user_1a3698f86316bcaaad6c1b927aabbf77ea">userSocket</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_server">Server</link> <link linkend="_class_user_1af5f0705660684c7c9ae4ff481410cf1d">userServer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this class discribs the type <link linkend="_class_user">User</link> ATTENTION: this type is not runnable!!!! </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_user_1ab00a3725ff57fc30a3692ae62a04a28c"/><section>
+    <title>checkIdentity()</title>
+<indexterm><primary>checkIdentity</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>checkIdentity</secondary></indexterm>
+<para><computeroutput>boolean User.checkIdentity (String username, String password)</computeroutput></para><para>
+
+<para>This method checks, if the entered login data equals the safed data. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a7f2808b54aa248f0cb55c054a517b4fd"/><section>
+    <title>getDate()</title>
+<indexterm><primary>getDate</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getDate</secondary></indexterm>
+<para><computeroutput>static String User.getDate ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>This method returns the current date in a String format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a9d965e3bcc3a207272c1e8d5dc9416eb"/><section>
+    <title>getHashedPassword()</title>
+<indexterm><primary>getHashedPassword</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getHashedPassword</secondary></indexterm>
+<para><computeroutput>int User.getHashedPassword ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a32124ad2aee1ea0a409f56b770d6d82f"/><section>
+    <title>getIsBanned()</title>
+<indexterm><primary>getIsBanned</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getIsBanned</secondary></indexterm>
+<para><computeroutput>boolean User.getIsBanned ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1aa9381e318df49c67e8c703848c0164a9"/><section>
+    <title>getIsKicked()</title>
+<indexterm><primary>getIsKicked</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getIsKicked</secondary></indexterm>
+<para><computeroutput>boolean User.getIsKicked ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1adc0a352a5e5f804682d983191f45c524"/><section>
+    <title>getIsOnline()</title>
+<indexterm><primary>getIsOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getIsOnline</secondary></indexterm>
+<para><computeroutput>boolean User.getIsOnline ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1abb07b7b27987a3da9da8a0f1bce6b969"/><section>
+    <title>getIsVerwarnt()</title>
+<indexterm><primary>getIsVerwarnt</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getIsVerwarnt</secondary></indexterm>
+<para><computeroutput>boolean User.getIsVerwarnt ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a0ddfb19f7a18a54a823630a19341fb9f"/><section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput>static String User.getTime ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>This method returns the current time in a string format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1af632bff30f08f3071fa4411f7ada25cd"/><section>
+    <title>getUserIdentity()</title>
+<indexterm><primary>getUserIdentity</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserIdentity</secondary></indexterm>
+<para><computeroutput>int User.getUserIdentity ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a42e5663ca72b56ac9e332b10fc675826"/><section>
+    <title>getUserIsBanned()</title>
+<indexterm><primary>getUserIsBanned</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserIsBanned</secondary></indexterm>
+<para><computeroutput>boolean User.getUserIsBanned ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a77d0ba2972427793eb642b0594062acb"/><section>
+    <title>getUserKickCounter()</title>
+<indexterm><primary>getUserKickCounter</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserKickCounter</secondary></indexterm>
+<para><computeroutput>int User.getUserKickCounter ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a5747db015828288696092c5355aca1d7"/><section>
+    <title>getUserLastLoginDate()</title>
+<indexterm><primary>getUserLastLoginDate</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserLastLoginDate</secondary></indexterm>
+<para><computeroutput>String User.getUserLastLoginDate ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a1f3dda88d587340443fa2d0560592bfd"/><section>
+    <title>getUserLastLoginTime()</title>
+<indexterm><primary>getUserLastLoginTime</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserLastLoginTime</secondary></indexterm>
+<para><computeroutput>String User.getUserLastLoginTime ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1ae975e1fcd02e716e9ef51f79c259a2fb"/><section>
+    <title>getUsername()</title>
+<indexterm><primary>getUsername</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUsername</secondary></indexterm>
+<para><computeroutput>String User.getUsername ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a79c1db56e87be54ac5b60acea7e089e2"/><section>
+    <title>getUserRegistrationDate()</title>
+<indexterm><primary>getUserRegistrationDate</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserRegistrationDate</secondary></indexterm>
+<para><computeroutput>String User.getUserRegistrationDate ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a0c5cd70aab3b240ec374eb00d0e9e2ac"/><section>
+    <title>getUserRegistrationTime()</title>
+<indexterm><primary>getUserRegistrationTime</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserRegistrationTime</secondary></indexterm>
+<para><computeroutput>String User.getUserRegistrationTime ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1aaa76cbd1f8fe7c3a58b62bbb88fb60d4"/><section>
+    <title>getUserSeletedRoom()</title>
+<indexterm><primary>getUserSeletedRoom</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUserSeletedRoom</secondary></indexterm>
+<para><computeroutput>int User.getUserSeletedRoom ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1ac58ae55790a70d27312cbcebd3d74be2"/><section>
+    <title>hashPassword()</title>
+<indexterm><primary>hashPassword</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>hashPassword</secondary></indexterm>
+<para><computeroutput>int User.hashPassword (String password)</computeroutput></para><para>
+
+<para>This method returns the hasvalue of the password. The <link linkend="_class_user">User</link> structure only safe the hashvalue, not the passwords. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a12c1206a3c543b6d773c6d542ed52758"/><section>
+    <title>receiveFromClient()</title>
+<indexterm><primary>receiveFromClient</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>receiveFromClient</secondary></indexterm>
+<para><computeroutput>void User.receiveFromClient ( )</computeroutput></para><para>
+
+<para>This method is saved as a lambda in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>math.-name </para>
+</entry><entry>
+<para>local var-name </para>
+</entry><entry>
+<para>datatype </para>
+</entry><entry>
+<para>discribtion </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(1) </para>
+</entry><entry>
+<para>i_0 </para>
+</entry><entry>
+<para>inNewRoom </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para>should a existing room become delted </para>
+</entry></row>
+      <row >
+<entry>
+<para>(2) </para>
+</entry><entry>
+<para>i_1 </para>
+</entry><entry>
+<para>inDelRoom </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(3) </para>
+</entry><entry>
+<para>i_2 </para>
+</entry><entry>
+<para>inDirChat </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para>should a direct chat become created </para>
+</entry></row>
+      <row >
+<entry>
+<para>(4) </para>
+</entry><entry>
+<para>i_3 </para>
+</entry><entry>
+<para>inDirAdrr </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>who should be adressed in direct chat </para>
+</entry></row>
+      <row >
+<entry>
+<para>(5) </para>
+</entry><entry>
+<para>i_4 </para>
+</entry><entry>
+<para>inSelRoom </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>content of message =&gt; text </para>
+</entry></row>
+      <row >
+<entry>
+<para>(6) </para>
+</entry><entry>
+<para>i_5 </para>
+</entry><entry>
+<para>inMsgCont </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>content of message </para>
+</entry></row>
+      <row >
+<entry>
+<para>(7) </para>
+</entry><entry>
+<para>i_6 </para>
+</entry><entry>
+<para>inMsgDisc </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>discribtion for a new <link linkend="_class_room">Room</link> </para>
+</entry></row>
+      <row >
+<entry>
+<para>(8) </para>
+</entry><entry>
+<para>i_7 </para>
+</entry><entry>
+<para>inMsgDate </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>date of message </para>
+</entry></row>
+      <row >
+<entry>
+<para>(9) </para>
+</entry><entry>
+<para>i_8 </para>
+</entry><entry>
+<para>inMsgTime </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(10) </para>
+</entry><entry>
+<para>i_9 </para>
+</entry><entry>
+<para>inMsgUser </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>ownId of <link linkend="_class_user">User</link>  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para> <?linebreak?><?linebreak?></para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="13" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+      <colspec colname='c6'/>
+      <colspec colname='c7'/>
+      <colspec colname='c8'/>
+      <colspec colname='c9'/>
+      <colspec colname='c10'/>
+      <colspec colname='c11'/>
+      <colspec colname='c12'/>
+      <colspec colname='c13'/>
+<thead>
+      <row >
+<entry>
+<para>operation mode </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>i_0 </para>
+</entry><entry>
+<para>i_1 </para>
+</entry><entry>
+<para>i_2 </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>i_3 </para>
+</entry><entry>
+<para>i_4 </para>
+</entry><entry>
+<para>i_5 </para>
+</entry><entry>
+<para>i_6 </para>
+</entry><entry>
+<para>i_7 </para>
+</entry><entry>
+<para>i_8 </para>
+</entry><entry>
+<para>i_9  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>direct Chat </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>1  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para><formalpara><title>Legend:</title></formalpara>
+</para>
+
+<para><itemizedlist>
+<listitem>
+
+<para>for i_0 AND i_1 AND i_2: <itemizedlist>
+<listitem>
+
+<para>0 &lt;-&gt; must be false. </para>
+</listitem>
+<listitem>
+
+<para>1 &lt;-&gt; must be true. </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>for i_3 AND ... AND i_9: <itemizedlist>
+<listitem>
+
+<para>0 &lt;-&gt; value doesn&apos;t matter &lt;-&gt; value will not be safed. </para>
+</listitem>
+<listitem>
+
+<para>1 &lt;-&gt; value do matter &lt;-&gt; value will be safed. </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+</section>
+<anchor xml:id="_class_user_1a9928d17b174137d3d4b8acb68f514bbf"/><section>
+    <title>sendToClient()</title>
+<indexterm><primary>sendToClient</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>sendToClient</secondary></indexterm>
+<para><computeroutput>void User.sendToClient ( )<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This method is saved as a lambda in <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>Operation  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>(1) </para>
+</entry><entry>
+<para>check, if updated data are available  </para>
+</entry></row>
+      <row >
+<entry>
+<para>(2) </para>
+</entry><entry>
+<para>if yes, than do following <itemizedlist>
+<listitem>
+
+<para>send number of new rooms:int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per room: <itemizedlist>
+<listitem>
+
+<para>send the room title:String </para>
+</listitem>
+<listitem>
+
+<para>send the number of messages:int</para>
+
+<para><itemizedlist>
+<listitem>
+
+<para>send out_message_type:int </para>
+</listitem>
+<listitem>
+
+<para>send out_message_content:String </para>
+</listitem>
+<listitem>
+
+<para>send out_message_time:String </para>
+</listitem>
+<listitem>
+
+<para>send out_message_userId:int </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para></para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>send the number of users:int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per every user: <itemizedlist>
+<listitem>
+
+<para>send username:String </para>
+</listitem>
+<listitem>
+
+<para>send isOnline:boolean </para>
+</listitem>
+<listitem>
+
+<para>send selectedRoom:int </para>
+</listitem>
+<listitem>
+
+<para>send password:String </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para></para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+</section>
+<anchor xml:id="_class_user_1ad31fb44e6e337630cd17a14b9b3730d1"/><section>
+    <title>setIsOffline()</title>
+<indexterm><primary>setIsOffline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setIsOffline</secondary></indexterm>
+<para><computeroutput>void User.setIsOffline ( )</computeroutput></para><para>
+
+<para>This method interrupt the Thread userSender and userReceiver. Then the sockt connection to the client become closed. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a04c9b1223d6507da9eeec0b518bf6405"/><section>
+    <title>setIsOnline()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>setIsOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setIsOnline</secondary></indexterm>
+<para><computeroutput>void User.setIsOnline ( )</computeroutput></para><para>
+
+<para>set the var <link linkend="_class_user_1a72e6f95652a9c28a176952c98a14c5dd">User.userIsOnline</link> true </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1ae3ae624521d9d151af08e29294b783fc"/><section>
+    <title>setIsOnline()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>setIsOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setIsOnline</secondary></indexterm>
+<para><computeroutput>void User.setIsOnline (Socket socket, <link linkend="_class_server">Server</link> server)</computeroutput></para><para>
+
+<para>This method declares and initialises the both Threads <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. Than the method trys to copy the parameter-socket into the class-variable <link linkend="_class_user_1a3698f86316bcaaad6c1b927aabbf77ea">User.userSocket</link>. At last the method starts the two threads in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> will run the method User.sendToUser(). <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link> will run the method <link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">User.receiveFromClient()</link>. Al last, this method calls the method User.setIsUpdate(). </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>socket</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>server</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>java.net.SocketException</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_user_1ab236a5d76711a0cb1f495a4b47a0655e"/><section>
+    <title>setUserIsBannd()</title>
+<indexterm><primary>setUserIsBannd</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUserIsBannd</secondary></indexterm>
+<para><computeroutput>void User.setUserIsBannd ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a90ce0afdad0d42bd1c49c763bbc1be52"/><section>
+    <title>setUserIsKicked()</title>
+<indexterm><primary>setUserIsKicked</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUserIsKicked</secondary></indexterm>
+<para><computeroutput>void User.setUserIsKicked ( )</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_user_1a3fd081144eb72fa4dde91a4b7524cf1e"/><section>
+    <title>setUserIsVerwarned()</title>
+<indexterm><primary>setUserIsVerwarned</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUserIsVerwarned</secondary></indexterm>
+<para><computeroutput>void User.setUserIsVerwarned (String str)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>str</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_user_1ac888dac0c02e9d169f6f3767c23f334c"/><section>
+    <title>setUserSelectedRoom()</title>
+<indexterm><primary>setUserSelectedRoom</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUserSelectedRoom</secondary></indexterm>
+<para><computeroutput>void User.setUserSelectedRoom (int ridx)</computeroutput></para>
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ridx</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_user_1a5699ebda8242215036b22e90e7dc5c1f"/><section>
+    <title>userID</title>
+<indexterm><primary>userID</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userID</secondary></indexterm>
+<para><computeroutput>int User.userID<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a97dac87d3fc0347a41b6815a73a07925"/><section>
+    <title>userIsBanned</title>
+<indexterm><primary>userIsBanned</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userIsBanned</secondary></indexterm>
+<para><computeroutput>boolean User.userIsBanned<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a71a980b8abfdee45b26ed28e3ca9b013"/><section>
+    <title>userIsKicked</title>
+<indexterm><primary>userIsKicked</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userIsKicked</secondary></indexterm>
+<para><computeroutput>boolean User.userIsKicked<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1abbf3338f25f50a559ca3714fbc4799d1"/><section>
+    <title>userIsKickedCounter</title>
+<indexterm><primary>userIsKickedCounter</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userIsKickedCounter</secondary></indexterm>
+<para><computeroutput>int User.userIsKickedCounter<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a72e6f95652a9c28a176952c98a14c5dd"/><section>
+    <title>userIsOnline</title>
+<indexterm><primary>userIsOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userIsOnline</secondary></indexterm>
+<para><computeroutput>boolean User.userIsOnline<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a7ecbc77bda944dc18b4dcd263db257fb"/><section>
+    <title>userIsVerwarned</title>
+<indexterm><primary>userIsVerwarned</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userIsVerwarned</secondary></indexterm>
+<para><computeroutput>boolean User.userIsVerwarned<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a0849a956e2da51a8291ecef767d1730e"/><section>
+    <title>userLastLoginDate</title>
+<indexterm><primary>userLastLoginDate</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userLastLoginDate</secondary></indexterm>
+<para><computeroutput>String User.userLastLoginDate<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a729ecad5b9aa885171ef50ae22acd8f1"/><section>
+    <title>userLastLoginTime</title>
+<indexterm><primary>userLastLoginTime</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userLastLoginTime</secondary></indexterm>
+<para><computeroutput>String User.userLastLoginTime<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a37005fb3d638e4059c7ccc8ada9503bc"/><section>
+    <title>userPasswordHash</title>
+<indexterm><primary>userPasswordHash</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userPasswordHash</secondary></indexterm>
+<para><computeroutput>int User.userPasswordHash<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a75ae153d6897ca2d572987e0bcc230e5"/><section>
+    <title>userReceiver</title>
+<indexterm><primary>userReceiver</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userReceiver</secondary></indexterm>
+<para><computeroutput>Thread User.userReceiver<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a2807efc8499db2e4f148f374c96a873d"/><section>
+    <title>userRegistrationDate</title>
+<indexterm><primary>userRegistrationDate</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userRegistrationDate</secondary></indexterm>
+<para><computeroutput>String User.userRegistrationDate<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1ae8143941284969b2d08863ae54c2d127"/><section>
+    <title>userRegistrationTime</title>
+<indexterm><primary>userRegistrationTime</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userRegistrationTime</secondary></indexterm>
+<para><computeroutput>String User.userRegistrationTime<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a59db114846fce82b375e77d0a369b2e0"/><section>
+    <title>userSelectedRoom</title>
+<indexterm><primary>userSelectedRoom</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userSelectedRoom</secondary></indexterm>
+<para><computeroutput>int User.userSelectedRoom<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106"/><section>
+    <title>userSender</title>
+<indexterm><primary>userSender</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userSender</secondary></indexterm>
+<para><computeroutput>Thread User.userSender<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1af5f0705660684c7c9ae4ff481410cf1d"/><section>
+    <title>userServer</title>
+<indexterm><primary>userServer</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userServer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_server">Server</link> User.userServer<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a3698f86316bcaaad6c1b927aabbf77ea"/><section>
+    <title>userSocket</title>
+<indexterm><primary>userSocket</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userSocket</secondary></indexterm>
+<para><computeroutput>Socket User.userSocket<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a3d78bd2c7b73463591173e09b9e8e40d"/><section>
+    <title>userUsername</title>
+<indexterm><primary>userUsername</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userUsername</secondary></indexterm>
+<para><computeroutput>String User.userUsername<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_user_1a77a11366a6323051e5026c7e134ee424"/><section>
+    <title>userVerwarnung</title>
+<indexterm><primary>userVerwarnung</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>userVerwarnung</secondary></indexterm>
+<para><computeroutput>String User.userVerwarnung<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Felix Staacke/Downloads/v_2_12/src/<link linkend="__user_8java">User.java</link></section>
+</section>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__client_8java" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12/src/Client.java File Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12/src/Client.java</primary></indexterm>
+<para>
+
+<para>This is the excecutable class <link linkend="_class_client">Client</link>. This class contains a thread to send data to the server, and one thead to receive data from server. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_client">Client</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This is the excecutable class <link linkend="_class_client">Client</link>. This class contains a thread to send data to the server, and one thead to receive data from server. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+</section>

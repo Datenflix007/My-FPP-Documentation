@@ -1,0 +1,243 @@
+<!-- in index einfügen:
+  <div class="header">
+  <div class="headertitle"><div class="title">My Project Documentation</div></div>
+  </div>
+  <div class="contents">
+  <a href="doxygen_crawl.html"/>
+  </div>
+-->
+<h1>Bullet Points</h1>
+<h6>Hint: click to jump to Area</h6>
+<span onclick="location.href='#projektDiscribtion'">1. Project Discribtion</span><br/>
+<span onclick="location.href='#dictionary'">2. Dictionary</span><br/>
+<span onclick="location.href='#TODO'">3. TODO-List</span><br/>
+<span onclick="location.href='#workSharingReport'">4. Work-Sharing-Report</span><br />
+<span onclick="location.href='#roadToFuture'">5. Road to future</span>
+
+<br/><br/>
+
+<div id="projektDiscribtion" style="text-align: justify;">
+  <h1>1. Project Discribtion</h1>
+  This project was commissioned as part of the "Fortgeschrittenes-Programmier-Praktikum" event at the Friedrich-Schiller-Universität Jena. 
+  The current product status was created in partnership by Felix Staacke and a fellow student. 
+  On Prof. Amme's behalf, they had to program a message server and a compatible client. These were to be able to communicate with each other within a local network.
+  The two had to complete three milestones. 
+  First, they had to write a console application. 
+  In this, any number of clients can communicate in a message room on the server. 
+  Then, in the second milestone, they had to develop a GUI. 
+  Finally, several chat rooms and direct messages between users were implemented. Users can also be warned or blocked.
+  <br /><br/>
+  Following image shows the GUI of the Server.<br/>
+  <image src="img1.png" style="min-width: 400px; max-width: 50%;"></image><br/>
+  The user interface has four areas. One area (top left) to create new chat rooms. 
+  One area (top right) to list the currently existing rooms (room name and description). 
+  One area (middle) lists all users who are online, offline, or blocked, filtered. 
+  New accounts can also be created in this area. 
+  In the fourth area (bottom), the log data are listed and filtered by session.<br/>
+  You can close the program via the menu ribbon under "Anwendung".<br/>
+  If you want to create a new Chat-Room, enter the roomname and the roomdiscribtion in the textfields. 
+  Than press "Neuen Raum erstellen". 
+  If your want to controll the chatrooms, than you can select one Chat-Room with a left mouse click. 
+  After clicking, a new frame will open. 
+  The messages are listed on the left. 
+  In the middle, the room name and the room description can be entered. 
+  The number of users who are currently using the selected chatroom is also displayed. <br/>
+  <image src="img2.png" width="100%"></image><br/>
+  If you now click on a message, the frame on the right side expands. 
+  You can now also warn the user.<br/>
+  <image src="img3.png" width="100%"></image><br/>
+  You can select a user in the middle area by left-clicking. 
+  Another window will then open. 
+  From this window you can warn, ban, or contact the user via direct message. 
+  If the user is warned, a message window opens for the user. 
+  If the user is banned, the socket connection is closed. 
+  The user can not then reconnect in the future using these login details.<br/>
+  <image src="img4.png" style="min-width: 400px; max-width: 50%;"></image><br/>
+  In the lower area, you can show or hide the log entries of all sessions, the last session and the current session by left-clicking on the buttons.
+
+  <br/><br/>
+
+  When you run the client, a login window opens. 
+  There you enter a user name and password. 
+  Depending on the project order, a check is made to see whether the login data already exists. 
+  If so, the account is logged in. 
+  If not, a new account is created with the login data and logged in.<br/>
+  <image src="img5.png" style="min-width: 200px; max-width: 30%;"></image><br/>
+  After logging in, the login window disappears and the client interface appears.<br/>
+  <image src="img6.png" style="min-width: 400px; max-width: 50%;"></image><br/>
+  The user interface consists of three areas. 
+  The first (left) lists the option to create a new room (New Room), as well as all stored chat rooms. 
+  The second area (middle) lists all messages in a chat room. 
+  The third is on the right. 
+  This shows all users. 
+  If a room is selected, the users are filtered by "in this room", "in the other room", "offline". 
+  If no room is selected, the users are listed filtered by "Online" and "Offline".
+
+
+
+
+
+</div><br/><br/>
+<div id="dictionary">
+  <h1>2. Dictionary</h1>
+  
+  v_2_23/<br/>
+
+  <ul style="list-style-type: none; margin: 0; padding: 0;">
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="toggle">📁 classes
+        <ul class="nested" style="display: none; list-style-type: none; margin: 0; padding: 0;">
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$4.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$5.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$6$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$6$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$6.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$7$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$7$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$7$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$7.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$8.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$9.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$10.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$11.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client$12.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client2$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 DirectChat.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 DirectMessage.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Log.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Message.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 MyFileHandler.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Room.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$4.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$5.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6$4.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6$5.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$6.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$7$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$7$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$7$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$7$4.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$7.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$8.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$9.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$10.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$11.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$12.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$13.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$14.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$15$1$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$15$1.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$15$2.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$15$3.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server$15.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server.class</li>
+            <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 User.class</li>
+        </ul>
+    </li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="toggle">📁 docs
+      <ul class="nested" style="display: none; list-style-type: none; margin: 0; padding: 0;">
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 directChatMessages.csv</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 directChats.csv</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 log.txt</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 messages.csv</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 rooms.csv</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 server.cfg</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 sitzung.csg</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 users.csv</li>
+      </ul>
+    </li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="toggle">📁 doxygen
+      <ul class="nested" style="display: none; list-style-type: none; margin: 0; padding: 0;">          
+        <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="toggle">📁 html
+          <ul class="nested" style="display: none; list-style-type: none; margin: 0; padding: 0;">          
+          </ul>
+        </li>
+        <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 overview.html</li>
+        <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 img1.png</li>
+      </ul>
+    </li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="toggle">📁 src
+      <ul class="nested" style="display: none; list-style-type: none; margin: 0; padding: 0;">
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Client2.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 DirectChat.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 FileHandler.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Log.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Message.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Rooms.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Server.java</li>
+          <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 User.java</li>
+      </ul>
+    </li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 buildServer.bat</li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 buildClient.bat</li>
+    <li style="cursor: pointer; position: relative; padding: 8px 12px; margin-left: 20px;" class="file">📄 Readme.txt</li>
+  </ul>
+
+<script>
+    var toggler = document.getElementsByClassName("toggle");
+    for (var i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            var nested = this.querySelector(".nested");
+            nested.style.display = nested.style.display === "block" ? "none" : "block";
+        });
+    }
+</script>
+
+
+</div><br/><br/>
+<div id="TODO">
+  <h1>3. TODO-List</h1>
+
+  <ul>
+    <li>Client
+      <ul>
+        <li>Redesign the Login-Frame. Implement a registration dialog</li>
+        <li>For a selected chat room, today's date is always displayed, not when the message was sent.</li>
+        <li>Implement a file selection and file sending to the server</li>
+        <li>Implement support data or conntact form</li>
+        <li>Redesign the GUI. No more three grid layouts. Instead, a dashboard in which the rooms, messages and users can be displayed.</li>
+        <li>Extend the user profile. Implement user profile pictures and status string.</li>
+      </ul>
+    </li>
+    <li>Server
+      <ul>
+        <li>Redesin the GUI. One central dashboard. Without any selections, just display icons for rooms, accounts and log data. If one of the icons become selected, repaint frame and show selected area instead of dashboard</li>
+        <li>Reimplement the room details. Display the account name, not the account idx.</li>
+        <li>Reimplement the User class. Save profile pictures and status strings.</li>
+        <li>implement the file receiving and the file saving. Maybe reimplement class Message. Code a second constructor.</li>
+      </ul>
+    </li>
+  </ul>
+
+</div><br /><br />
+<div id="workSharingReport">
+   <h1>4. Work-Sharing Report</h1>
+   The significant part of modelling and coding were made of Mr. Staacke.
+</div>
+
+</div><br /><br />
+<div id="roadToFuture" style="text-align: justify;">
+   <h1>5. Road to future</h1>
+   This project could become extended to an application for schools. 
+   If the server application will be extended, to generate simulated messages by Server. 
+   Both applications could be used to teach the students how to use social media plattforms. 
+   An possible experimental extension could be an implementation of Minigames.
+   I.e. the Server could ask questions in one selected chat-room.
+   The students should enter the right answer in the same chat. 
+  <br/><br/>
+   Following you can see an posibile long term target of a new GUI.<br/>
+   <image src="img7.png" style="min-width: 400px; max-width: 50%;"></image><br/>
+   <image src="img8.png" style="min-width: 400px; max-width: 50%;"></image><br/>
+
+</div>

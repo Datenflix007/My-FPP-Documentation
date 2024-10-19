@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__direct_chat_8java" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12/src/DirectChat.java File Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12/src/DirectChat.java</primary></indexterm>
+<para>
+
+<para>This class defines the datastructure DirectChat. A direct-chat is a kind of ChatRoom, but only available between two users. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <emphasis role="strong">DirectChat</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class defines the datastructure DirectChat. A direct-chat is a kind of ChatRoom, but only available between two users. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><?linebreak?> <emphasis role="bold">Attention:</emphasis> This class isn&apos;t excecutable<?linebreak?><?linebreak?> <emphasis role="bold">Hint:</emphasis> This class only contains getter and setter methods. </para>
+</section>
+</section>

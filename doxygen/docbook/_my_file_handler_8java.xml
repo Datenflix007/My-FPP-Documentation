@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__my_file_handler_8java" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12/src/MyFileHandler.java File Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12/src/MyFileHandler.java</primary></indexterm>
+<para>
+
+<para>This class contains methods, to parse and returns safed data from device. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_my_file_handler">MyFileHandler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class contains methods, to parse and returns safed data from device. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+this class discribes the type FileHandler<?linebreak?> ATTENTION: this type is not runnable!!!!<?linebreak?> <?linebreak?><?linebreak?>  <formalpara><title>Method Overview</title></formalpara>
+</para>
+
+<para><?linebreak?> <informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row >
+<entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>Identity </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>visibility </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>return type </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>method name </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>note  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+</row>
+    </tbody>
+    </tgroup>
+</informaltable>
+td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.MyFileHandler()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;none&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.MyFileHandler() &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;Constructor of the class&lt;br /&gt;Message data relation  :=   (messageType:int, messageDate:String, messageTime:String, messageContent:String, messageUserId:int, messageIsDeleted:boolean )&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1a368e92ce71c68c4d81a4f3ea93c6b517">MyFileHandler.parseDirectChatCSV()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;DirectChat&gt; &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseDirectChatCSV(path : String)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of DirectChat. This DirectChat become added into the DirectChat typed Array-List. This Array List become returned.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseDirectChatMessageCSV()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;DirectMessage&gt;&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseDirectChatMessageCSV(path : String, idx : int) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of DirectMessage. This DirectMessage become added into the DirectMessage typed Array-List. This Array List become returned.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1a804f9dfdf37a23d377fae5b99b3d913f">MyFileHandler.parseMessageCSV()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;Message&gt; &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseMessageCSV(path : String)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of <link linkend="_class_message">Message</link>. This <link linkend="_class_message">Message</link> become added into the <link linkend="_class_message">Message</link> typed Array-List. This Array List become returned.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseUserCSV()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;User&gt;&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseUserCSV(path : String) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of User. This User become added into the User typed Array-List. This Array List become returned.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1a096206c1d2c87a21c1b200951ad00e0d">MyFileHandler.parseRoomsCSV()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;Room&gt; &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseRooms(path : String)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of <link linkend="_class_room">Room</link>. This <link linkend="_class_room">Room</link> become added into the <link linkend="_class_room">Room</link> typed Array-List. This Array List become returned.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseLogs()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;ArrayList&lt;Log&gt;&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseLogs(path : String) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value parameter path. This method copy data line per line. Than the data of a single line are used to generate a new instance of Log. This Log become added into the Log typed Array-List. This Array List become returned.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1ac7bd05a7d85a63deee88c39c5b05ceae">MyFileHandler.parseServerCFG()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;String[] &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseServerCFG(path : String)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parses the file on divice with value of parameter path. This method copy data line per line into a string-typed-array. The string become returned.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseSitzung()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;int&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.parseSitzung(path : Path) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method parse the file on divice with value of parameter path. Than it returns the value of sitzung casted into int.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1aab8e28ac01f6eeb9434477d907c27dac">MyFileHandler.appendToFile()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;none &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.appendToFile(path:String, content:String)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method appends the value of the parameter content to the file on device with the relative path.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.overwriteFile()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;void&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.overwriteFile(path:String, idx:int, content:String) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This is first kind of MyFileHandler.overwriteFile().&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;<link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;void &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.overwriteFile(path:String, idx:int)&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This is an overloaded alternative to <link linkend="_class_my_file_handler_1a328995b3d92388a810b9dfca3037dc83">MyFileHandler.overwriteFile()</link>.  </para>
+
+<para> &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.overwriteSitzung()&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;public &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;none&lt;/td&gt;
+     &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;MyFileHandler.overwriteSitzung(path:String, sitzung:int) &lt;td border-bottom: 2px solid black; text-postition: justify;&quot;&gt;This method overwrite the content of the file on device with relative Path path. The old value should be replaced with value of the parameter sitzung.  </para>
+
+<para>  </para>
+</section>
+</section>

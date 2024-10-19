@@ -1,0 +1,1032 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__server_8java" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12/src/Server.java File Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12/src/Server.java</primary></indexterm>
+<para>
+
+<para>this class discribes the excecutable type <link linkend="_class_server">Server</link> </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_server">Server</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this class discribes the excecutable type <link linkend="_class_server">Server</link> </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14.10.2024, 22:06</para>
+</formalpara>
+<formalpara><title>Bullet Points</title></formalpara>
+</para>
+
+<para><formalpara><title>(click to scroll to bullet point)</title></formalpara>
+</para>
+
+<para><?linebreak?> 1. TODO <?linebreak?> 2. Method Overview<?linebreak?> 3. Local Variables<?linebreak?> 4. Imported Packages<?linebreak?><?linebreak?><?linebreak?></para>
+
+<para> <formalpara><title>1. TODO List</title></formalpara>
+</para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row  style='border: thin solid black;'>
+<entry style='border: 1px solid black; background-color: #6ec8f5;' width='60%'>
+<para>Discribtion </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;' width='20%'>
+<para>Error </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;' width='20%'>
+<para>status </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>Redesin the GUI. One central dashboard. Without any selections, just display icons for rooms, accounts and log data. If one of the icons become selected, repaint frame and show selected area instead of dashboard </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>edit <link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">Server.serverGUI()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>work in progress </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>Reimplement the room details. Display the account name, not the account idx. </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>less priority </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>Reimplement the <link linkend="_class_user">User</link> class. Save profile pictures and status strings. </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>less priority </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>implement the file receiving and the file saving. Maybe reimplement class <link linkend="_class_message">Message</link>. Code a second constructor. </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>less priority  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para> <formalpara><title>2. Method Overview</title></formalpara>
+</para>
+
+<para><?linebreak?> <informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row >
+<entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>Identity </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>visibility </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>return type </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>method name </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>note </para>
+</entry></row>
+</thead><tbody>
+      <row  style='border: 1px solid black;'>
+<entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para>Server.Server() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server">Server()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>default constructor  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a70bb0a891c288abe65b9126e7f309660">Server.initialize()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>initialize() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>initialize <link linkend="_class_my_file_handler">MyFileHandler</link><?linebreak?> get ServerSitzung out of &apos;sitzung.cfg&apos;<?linebreak?> increment serverSitzung and overwrite value in &apos;sitzung.cfg&apos;<?linebreak?> call initializeUseServerCFG(path to server.cfg) </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ace0ce586af36c8024040a43db4054ab7">Server.run()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>run() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>calls Server.conntectionListener() </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a0029dd5aa6f144cbff55f807cd9c28b6">Server.connectionListener()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>connectionListener() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>loop continues, if serverRun equals true<?linebreak?>if socket is initialize, than accept an incoming Socket connection </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">Server.serverGUI()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverGUI() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>loop: read server.cfg line by line<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;select keywords as modes<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; := { frameTitle &lt;=&gt; (Title for Frame : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Messages &lt;=&gt; (path to messages.csv : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rooms &lt;=&gt; (path to roooms.csv : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Users &lt;=&gt; (path to users.csv : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DirectChat &lt;=&gt; (path to directChats.csv),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_class_direct_message">DirectMessage</link>&lt;=&gt;(path to directChatMessages.csv),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<link linkend="_class_log">Log</link> &lt;=&gt; (path to log.txt),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameHeight&lt;=&gt; (Value for frame size : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameWidth &lt;=&gt; (Value for frame size : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameX &lt;=&gt; (value for frame position : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameY &lt;=&gt; (value for frame position : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameMenu &lt;=&gt; (Title for menu : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameMenuBarItem_QUIT &lt;=&gt; (add frameMenu an Iteam QUIT : String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Port &lt;=&gt; (Port : int),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;framePanelRoomsHeigth &lt;=&gt; (framePanelRoomsHeigth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;framePanelRoomsWidth &lt;=&gt; (framePanelRoomsWidth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;framePanelUsersHeigth &lt;=&gt; (framePanelUsersHeigth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;framePanelUsersWidth &lt;=&gt; (framePanelUsersWidth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;framePanelLogHeigth &lt;=&gt; (framePanelLogHeigth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tframePanelLogWidth &lt;=&gt; (framePanelLogWidth : (int) String),<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;frameHeadLineDimension&lt;=&gt; (font size for headlines: (int) String)<?linebreak?> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a2dd85c9db18b18d6e5cfb9584821e2e4">Server.initializeUseServerCFG()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>initializeUseServerCFG(String[&amp;nbsp] cfStrings) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a59cfbf7deacd632b6e51aaad5023ef53">Server.getUserIdentity()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>getUserIdentity(String username, String password) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>returns the position of user in users with username and password </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a9f0543907a574d052339d4ba3dafcb89">Server.serverGUI_JPanel_Log_repaint()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverGUI_JPanel_Log_repaint() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>paint Panel for logs<?linebreak?> =&gt; then select all elder logs<?linebreak?> =&gt; then select for last sitzung<?linebreak?> =&gt; then select for current sitzung </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a70bb6f9194edc357d437f0113912f675">Server.serverDirectChat()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverDirectChat(int idx) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>spawn Frame with directChat </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a62a34b38f1ed270ec60a6a89f97d78b9">Server.serverGUI_JPanel_Rooms_repaint()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverGUI_JPanel_Rooms_repaint() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ae3fb5eba012e7113c3e3abfcc784c4f5">Server.createScrollPane()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>JScrollPane </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>createScrollPane() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para><link linkend="_class_server_1aae25d1c8f9febea4e9ae7f59fd86eb41">Server.createHeaderLabel()</link> </para>
+</entry><entry>
+<para>private </para>
+</entry><entry>
+<para>JLabel </para>
+</entry><entry>
+<para>createHeaderLabel() </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a2f8112aad5f3ba646c361f2ac829f32f">Server.createLinePanel()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>private </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>JPanel </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>createLinePanel(labelText:String) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a605c16c18206695c45dae389f4769a7f">Server.createPanel()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>private </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>JPanel </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>createPanel(labelText:String, width:int, height:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a9a5e10676dc736563679df92cb1ef24c">Server.addPanelToContent()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>private </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>addPanelToContent(content:JPanel, panel:JPanel, gbc:GridBagConstraints, gridx:int, gridy:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a87bf0eefe6145205a511b876a9c38bf3">Server.serverAddMessage()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAddMessage(message:Message, room:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ad78a971133bcaacfadaeb4b968a347b9">Server.serverAddRoom()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAddRoom(room:Room) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a353352900b62dc47d33e83dff929f792">Server.serverAddUser()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAddUser(user:User) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ac41b9cd2359cbae949bc0525333dcc94">Server.serverGetNewRoomIdx()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverGetNewRoomIdx() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a52d24c041dc4f55ba76e32071397a640">Server.serverAppendToFile()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAppendToFile(mode:int, content:String) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>mode = 0 =&gt; new room<?linebreak?> mode = 1 =&gt; new message<?linebreak?> mode = 2 =&gt; new user<?linebreak?> mode = 3 =&gt; new log entry<?linebreak?> mode = 4 =&gt; new direct chat<?linebreak?> mode = 5 =&gt; new direct chat message </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a121ea9cf2ead4af53104a0f4fda5cbbb">Server.serverDelRoom()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverDelRoom(idx:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para>Server.serverEditRoom() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverEditRoom(idx:int, content1:String, content2:String) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a0280a3475a460ad6c00c07efe714e347">Server.serverAddLog()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAddLog(user:int, content:String) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ad1f0d9b5cc78393a45619c293bbeb477">Server.serverAddDirectChat()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverAddDirectChat(title:String, idx:int, idxU:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a8096777938769b5b77a1261d14e26247">Server.serverUserVerwarnen()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverUserVerwarnen(idx:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a8096777938769b5b77a1261d14e26247">Server.serverUserVerwarnen()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverUserVerwarnen(idx:int, content:String) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a105520b8bef441b4798f951332230dd9">Server.serverUserKick()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverUserKick(idx:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a274c8583ba6436fe164a78a4300f9808">Server.serverUserBan()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>serverUserBan(idx:int) </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1ad1b00c7368d14c012b9cce517b6c4926">Server.getDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public static </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>getDate() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>returns current Date as String in format &apos;dd.mm.yyyy&apos; </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black;'>
+<para><link linkend="_class_server_1a26fe775536645c7a12d515ee216b2dc7">Server.getTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>public static </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>getTime() </para>
+</entry><entry style='border-bottom: 2px solid black;'>
+<para>returns current Time as String in format &apos;hh:mm&apos;  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para><?linebreak?><?linebreak?><?linebreak?>  <formalpara><title>3. Class Vars</title></formalpara>
+</para>
+
+<para> <itemizedlist>
+<listitem>
+
+<para>server socket data <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a24129ae964202c8df4ecccdb97080b0c">Server.server</link> : ServerSocket </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a559af32c66acfe2bbf1aec1fcb960fb5">Server.socket</link> : Socket </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a52987f6cdf28216379306bddc9e788ce">Server.serverRun</link> : boolean </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a91db4267ecd6153ed655cabdf506b75e">Server.port</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1ac6e7c56a590697ce2cfd50795a8158ca">Server.adress</link> : String </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>safing data on drive <itemizedlist>
+<listitem>
+
+<para>Server.FileHandler : <link linkend="_class_my_file_handler">MyFileHandler</link> </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a3bcd7adb60f2c930fc42479cfe319c66">Server.pathToUsers</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a9d8592da5641e48ebc2f1cc95430cd11">Server.pathToRooms</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1ad2abf417065e996b1230461e77dd4a3a">Server.pathToMessages</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a1667baf6db7e0d934147395137b078ce">Server.pathToLog</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1af33e26acccf697cb7d0dce3944334288">Server.users</link> : ArrayList&lt;User&gt; </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1af41e7aae796bdf0b252753275badde05">Server.rooms</link> : ArrayList&lt;Room&gt; </para>
+</listitem>
+<listitem>
+
+<para>Server.directCHats : ArrayList&lt;DirectChat&gt; </para>
+</listitem>
+<listitem>
+
+<para>Server.log : ArrayList&lt;Log&gt; </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a3ac21b03022fd98fa2d21642f8a11485">Server.pathToDirectChat</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a6fbe8ed4d781a5e094873425ca7f3fb4">Server.pathToDirectMessage</link> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>threads <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a8671d10d89015c688c90f04e47cf80f8">Server.serverGUI</link> : Thread </para>
+</listitem>
+<listitem>
+
+<para>Server.serverConnectionListener : Thread </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>framework <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a5546934f09232f5a67fa5f3dcc0246c9">Server.serverUpdate</link> : boolean </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a56b8c50b29b6cb2186875d110c7d56b9">Server.mainFrame</link> : JFrame </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1aa857d47799e5cf3c3c93f6838261cc96">Server.mainFrameTitle</link> : String </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1afbb2367d931881d8302e840485f699c5">Server.mainFrameWidth</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1aceb8edf5322f10a2f88ce6ef8910e2d7">Server.mainFrameHeigth</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1aa104dd24cc92846148276053b42056d1">Server.mainFrameX</link> : int&gt; </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a07f86e671429847971e8cd0af5386fbd">Server.mainFrameY</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a6e8512182f497e17318fea844b886ec9">Server.mainFrameMenu</link> : JMenu </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a797490ef032cfe1a679b242a61af5e29">Server.mainFrameMenuBar</link> : JMenuBar </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a28d7ee7c093a0b170a276a3c21c6718a">Server.mainFrameMenuBarItem_QUIT</link> : JMenuItem </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>panel rooms <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1ae4ad12c127ed23061abb2f08f29eb2ff">Server.mainFrameJPanelRooms</link> : JPanel </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a698064046c9762c0b39af882d1d75bf8">Server.mainFrameJPanelRoomsHeigth</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a4a3bbece95c871dfb23adae40d185129">Server.mainFrameJPanelRoomsWidth</link> : int </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>panel users <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a12172715a6e0b8c68b28d2d1174f3fb8">Server.mainFrameJPanelUsers</link> : JPanel </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a336804867666b300098ba8257be17569">Server.mainFrameJPanelUsersHeigth</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a726dc02d85a6cc5f9f5320cff414adfe">Server.mainFrameJPanelUsersWidth</link> : int </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>panel serverlog <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a53ab834c4aa0a9e628e74a4a7f6c28a4">Server.mainFrameJPanelLog</link> : JPanel </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a3a264e29e815ca5cff23ba237aae2792">Server.mainFrameJPanelLogHeigth</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a9c8e31ffc3872223b443f80bc62b2f52">Server.mainFrameJPanelLogWidth</link> : int </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>other stuff <itemizedlist>
+<listitem>
+
+<para><link linkend="_class_server_1a01266c094ee91f0b09de1ebc2e26a527">Server.mainFrameHeadLineDimension</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a2f5876ca7704f864ce62765bbfba2d3e">Server.mainFrameRoomnameDimension</link> : int </para>
+</listitem>
+<listitem>
+
+<para><link linkend="_class_server_1a72f8ba78e0687141de35591bac077b75">Server.serverSitzung</link> : int </para>
+</listitem>
+<listitem>
+
+<para>Server.allLogsBool : boolean </para>
+</listitem>
+<listitem>
+
+<para>Server.lastLogsBool : boolean </para>
+</listitem>
+<listitem>
+
+<para>Server.currentLogsBool : boolean </para>
+</listitem>
+<listitem>
+
+<para>Server.withIDE : boolean; <emphasis role="bold">Note: </emphasis>If val is true, then the application starts with GUI. Else the server is running as a console application </para>
+</listitem>
+<listitem>
+
+<para>Server.sendUpdatedData : boolean </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+ <?linebreak?><?linebreak?><?linebreak?></para>
+
+<para> <formalpara><title>4. Imported packages</title></formalpara>
+</para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>package </para>
+</entry><entry>
+<para>class </para>
+</entry><entry>
+<para>note </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>java.awt </para>
+</entry><entry>
+<para>java.awt.event.ActionListener </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.event.KeyListener </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.event.MouseEvent </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.event.MouseListener </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.Dimension </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.FlowLayout </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.GridLayout </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.ScrollPane </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.awt.event.ActionEvent </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>java.io </para>
+</entry><entry>
+<para>java.io.File </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.io.IOException </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>java.util </para>
+</entry><entry>
+<para>java.util.ArrayList </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.util.Date </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>java.util.logging.FileHandler </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>javax.management </para>
+</entry><entry>
+<para>javax.management.relation.RoleList </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>java.net </para>
+</entry><entry>
+<para>java.net.Socket </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>javax.swing </para>
+</entry><entry>
+<para>javax.swing.BorderFactory </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.BoxLayout </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JButton </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JFrame </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JLabel </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JMenu </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JMenuBar </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JMenuItem </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JPanel </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JScrollPane </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JTable </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JTextArea </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JTextField </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.SwingUtilities </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.event.TableModelEvent </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.event.TableModelListener </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.table.DefaultTableModel </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.table.TableColumn </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para>javax.swing.JMenuItem </para>
+</entry><entry>
+<para></para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+ </para>
+</section>
+</section>

@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_client" xml:lang="en-US">
+<title>Client Class Reference</title>
+<indexterm><primary>Client</primary></indexterm>
+Collaboration diagram for Client:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_client__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_client_1a1bfc7aa37481bac8bc6b3e6a1640ffe0">initialize</link> ()</para>
+
+<para>This method initialise the class vars. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_client_1a87b4b19a18949a872115c6cdcc71c225">getDateTime</link> ()</para>
+
+<para>This method returns the current date and time as string format. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1a64336c3153afaaf5f45493e9ed206430">run</link> ()</para>
+
+<para>This method spawns the Window and starts the Threads in lambda expression. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_client_1a62ac854d05589aa1cc7fd3cce57bc393">getDate</link> ()</para>
+
+<para>This method returns the current date in String format. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_client_1a76c0cfadebdaab55532cf53c8ed71a65">getTime</link> ()</para>
+
+<para>This method returns the current time in String format. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1a9c693faf4a89623f630e770b21200bed">Framework</link> ()</para>
+
+<para>This method handels the GUI. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1a4076d46aef277037a476d945dcf24a29">showDirectMessages</link> (int userId, String content)</para>
+
+<para>This method spawns a window to show the directChatMessages. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1a7fe2e70af38af3d7be7bb1ca98cce1d0">setProcoll</link> (Object[] args)</para>
+
+<para>This methods sets the value initialising of the protocoll data. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1ae260e6979119f1b5e760a9d942e98f44">serverWriter</link> ()</para>
+
+<para>This methods handels the sending to the server. *. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_client_1a88f63705fefb5975fde628fe9a7eab3b">serverListener</link> ()</para>
+
+<para>This method handels the data receiving. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_client_1aff944556f9dff16c9e69bfcf2246c90c">main</link> (String[] arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_client_1aa3605cb435b3578de7102263ed9649fc">sendFileToServer</link> (File file)</para>
+
+<para>This method should send a file to server. Actually it doesn&apos;t work. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static String <link linkend="_class_client_1a41e5fdccb4e00720b1d6df2f611a5bb2">getFileExtension</link> (String fileName)</para>
+
+<para>This method gets the file extension of a file with the relative path. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Socket <link linkend="_class_client_1a8e8a6328d58ae78542f29ae058f2b909">socket</link></para>
+</listitem>
+            <listitem><para>DataOutputStream <link linkend="_class_client_1a7afe363886acdc0c435a0176eb8c04dc">dos</link></para>
+</listitem>
+            <listitem><para>DataInputStream <link linkend="_class_client_1ae4c7d06a87889dc13bd64cb03a4093ff">dis</link></para>
+</listitem>
+            <listitem><para>ObjectOutputStream <link linkend="_class_client_1a64cc218ff5cf7d0042ba32adbea64da2">oos</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_room">Room</link> &gt; <link linkend="_class_client_1af946f07488c90f708481124e905b061c">rooms</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_user">User</link> &gt; <link linkend="_class_client_1a3fd467d194cb9d7ec1c851b5c12f7989">users</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; DirectChat &gt; <link linkend="_class_client_1a8d37233a4632f8900f2f51e960947e47">directs</link></para>
+</listitem>
+            <listitem><para>JFrame <link linkend="_class_client_1ae86e1487f3e35659837a918d7109a3c3">mainFrame</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_client_1a3cd28d5493e3ca5c7d0aab8cdaafe660">mainFrameTitle</link></para>
+</listitem>
+            <listitem><para>Border <link linkend="_class_client_1a2ad5f2e1d432fc6f92f81042fcd0b31e">mainFrameBorder</link></para>
+</listitem>
+            <listitem><para>JMenu <link linkend="_class_client_1a9da6dd08334692c3b8f379b579687f8a">mainFrameMenu</link></para>
+</listitem>
+            <listitem><para>JMenuBar <link linkend="_class_client_1a725adbeefced84f0e342f88a8fa1c6ee">mainFrameMenuBar</link></para>
+</listitem>
+            <listitem><para>JMenuItem <link linkend="_class_client_1a3945369402d8881fa83d1d9e1c87f06c">mainFrameMenuItem_QUIT</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_client_1a619619a8f5c5a2b7f6ae30e5c2290e83">clientRun</link></para>
+</listitem>
+            <listitem><para>Object[] <link linkend="_class_client_1aa4df8ad8d5c10f4244c7fa8c79b354a3">protocoll</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_client_1a4481a7e91060712f409c9c95d7bfba45">update</link></para>
+</listitem>
+            <listitem><para>boolean <link linkend="_class_client_1ab027fd30fbcbf03e5041dbbb11d9c661">send</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_client_1abed07f7395f4292d8d66947d8accd54d">selectedRoom</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_client_1adab0599aef35d658a293db66512e03e1">ownId</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_client_1a9c693faf4a89623f630e770b21200bed"/><section>
+    <title>Framework()</title>
+<indexterm><primary>Framework</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>Framework</secondary></indexterm>
+<para><computeroutput>void Client.Framework ( )</computeroutput></para><para>
+
+<para>This method handels the GUI. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>@TODO: Definitly reimplement this method. </para>
+</section>
+<anchor xml:id="_class_client_1a62ac854d05589aa1cc7fd3cce57bc393"/><section>
+    <title>getDate()</title>
+<indexterm><primary>getDate</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>getDate</secondary></indexterm>
+<para><computeroutput>String Client.getDate ( )</computeroutput></para><para>
+
+<para>This method returns the current date in String format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1a87b4b19a18949a872115c6cdcc71c225"/><section>
+    <title>getDateTime()</title>
+<indexterm><primary>getDateTime</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>getDateTime</secondary></indexterm>
+<para><computeroutput>String Client.getDateTime ( )</computeroutput></para><para>
+
+<para>This method returns the current date and time as string format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix <?linebreak?></para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1a41e5fdccb4e00720b1d6df2f611a5bb2"/><section>
+    <title>getFileExtension()</title>
+<indexterm><primary>getFileExtension</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>getFileExtension</secondary></indexterm>
+<para><computeroutput>static String Client.getFileExtension (String fileName)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This method gets the file extension of a file with the relative path. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fileName</entry><entry>
+<para>: String </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>: String </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1a76c0cfadebdaab55532cf53c8ed71a65"/><section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput>String Client.getTime ( )</computeroutput></para><para>
+
+<para>This method returns the current time in String format. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>the other student</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1a1bfc7aa37481bac8bc6b3e6a1640ffe0"/><section>
+    <title>initialize()</title>
+<indexterm><primary>initialize</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>initialize</secondary></indexterm>
+<para><computeroutput>void Client.initialize ( )</computeroutput></para><para>
+
+<para>This method initialise the class vars. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1aff944556f9dff16c9e69bfcf2246c90c"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>static void Client.main (String[] arg)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a64336c3153afaaf5f45493e9ed206430"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>void Client.run ( )</computeroutput></para><para>
+
+<para>This method spawns the Window and starts the Threads in lambda expression. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1aa3605cb435b3578de7102263ed9649fc"/><section>
+    <title>sendFileToServer()</title>
+<indexterm><primary>sendFileToServer</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>sendFileToServer</secondary></indexterm>
+<para><computeroutput>void Client.sendFileToServer (File file)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>This method should send a file to server. Actually it doesn&apos;t work. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><para><link linkend="_todo_1_todo000001">Todo</link> 
+<para>finish this implementation. Than implement a file receiving result at the server side.</para>
+</para></para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>file</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_client_1a88f63705fefb5975fde628fe9a7eab3b"/><section>
+    <title>serverListener()</title>
+<indexterm><primary>serverListener</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>serverListener</secondary></indexterm>
+<para><computeroutput>void Client.serverListener ( )</computeroutput></para><para>
+
+<para>This method handels the data receiving. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para><formalpara><title>protocoll</title></formalpara>
+</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>Operation  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>(1) </para>
+</entry><entry>
+<para>Thread blueprint for lambda: ()-&gt;<link linkend="_class_client_1a88f63705fefb5975fde628fe9a7eab3b">serverListener()</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>(2) </para>
+</entry><entry>
+<para>if client recieve data from server <itemizedlist>
+<listitem>
+
+<para>if yes, than do following: <itemizedlist>
+<listitem>
+
+<para>recieve number of new rooms : int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per room: <itemizedlist>
+<listitem>
+
+<para>recieve the room title : String </para>
+</listitem>
+<listitem>
+
+<para>recieve the number of messages : int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per message: <itemizedlist>
+<listitem>
+
+<para>recieve in_message_type : int </para>
+</listitem>
+<listitem>
+
+<para>recieve in_message_content : String </para>
+</listitem>
+<listitem>
+
+<para>recieve in_message_time : String </para>
+</listitem>
+<listitem>
+
+<para>recieve in_message_userId : int </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>recieve the number of users : int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per every user: <itemizedlist>
+<listitem>
+
+<para>recieve username : String </para>
+</listitem>
+<listitem>
+
+<para>recieve isOnline : boolean </para>
+</listitem>
+<listitem>
+
+<para>recieve selectedRoom : int </para>
+</listitem>
+<listitem>
+
+<para>recieve password : String </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para></para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+</section>
+<anchor xml:id="_class_client_1ae260e6979119f1b5e760a9d942e98f44"/><section>
+    <title>serverWriter()</title>
+<indexterm><primary>serverWriter</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>serverWriter</secondary></indexterm>
+<para><computeroutput>void Client.serverWriter ( )</computeroutput></para><para>
+
+<para>This methods handels the sending to the server. *. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_client_1a7fe2e70af38af3d7be7bb1ca98cce1d0"/><section>
+    <title>setProcoll()</title>
+<indexterm><primary>setProcoll</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>setProcoll</secondary></indexterm>
+<para><computeroutput>void Client.setProcoll (Object[] args)</computeroutput></para><para>
+
+<para>This methods sets the value initialising of the protocoll data. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>: Object[ ] </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_client_1a4076d46aef277037a476d945dcf24a29"/><section>
+    <title>showDirectMessages()</title>
+<indexterm><primary>showDirectMessages</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>showDirectMessages</secondary></indexterm>
+<para><computeroutput>void Client.showDirectMessages (int userId, String content)</computeroutput></para><para>
+
+<para>This method spawns a window to show the directChatMessages. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix</para>
+</formalpara>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>userId</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>content</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_client_1a619619a8f5c5a2b7f6ae30e5c2290e83"/><section>
+    <title>clientRun</title>
+<indexterm><primary>clientRun</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>clientRun</secondary></indexterm>
+<para><computeroutput>boolean Client.clientRun<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a8d37233a4632f8900f2f51e960947e47"/><section>
+    <title>directs</title>
+<indexterm><primary>directs</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>directs</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;DirectChat&gt; Client.directs<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1ae4c7d06a87889dc13bd64cb03a4093ff"/><section>
+    <title>dis</title>
+<indexterm><primary>dis</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>dis</secondary></indexterm>
+<para><computeroutput>DataInputStream Client.dis<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a7afe363886acdc0c435a0176eb8c04dc"/><section>
+    <title>dos</title>
+<indexterm><primary>dos</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>dos</secondary></indexterm>
+<para><computeroutput>DataOutputStream Client.dos<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1ae86e1487f3e35659837a918d7109a3c3"/><section>
+    <title>mainFrame</title>
+<indexterm><primary>mainFrame</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrame</secondary></indexterm>
+<para><computeroutput>JFrame Client.mainFrame<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a2ad5f2e1d432fc6f92f81042fcd0b31e"/><section>
+    <title>mainFrameBorder</title>
+<indexterm><primary>mainFrameBorder</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrameBorder</secondary></indexterm>
+<para><computeroutput>Border Client.mainFrameBorder<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a9da6dd08334692c3b8f379b579687f8a"/><section>
+    <title>mainFrameMenu</title>
+<indexterm><primary>mainFrameMenu</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrameMenu</secondary></indexterm>
+<para><computeroutput>JMenu Client.mainFrameMenu<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a725adbeefced84f0e342f88a8fa1c6ee"/><section>
+    <title>mainFrameMenuBar</title>
+<indexterm><primary>mainFrameMenuBar</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrameMenuBar</secondary></indexterm>
+<para><computeroutput>JMenuBar Client.mainFrameMenuBar<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a3945369402d8881fa83d1d9e1c87f06c"/><section>
+    <title>mainFrameMenuItem_QUIT</title>
+<indexterm><primary>mainFrameMenuItem_QUIT</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrameMenuItem_QUIT</secondary></indexterm>
+<para><computeroutput>JMenuItem Client.mainFrameMenuItem_QUIT<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a3cd28d5493e3ca5c7d0aab8cdaafe660"/><section>
+    <title>mainFrameTitle</title>
+<indexterm><primary>mainFrameTitle</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>mainFrameTitle</secondary></indexterm>
+<para><computeroutput>String Client.mainFrameTitle<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a64cc218ff5cf7d0042ba32adbea64da2"/><section>
+    <title>oos</title>
+<indexterm><primary>oos</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>oos</secondary></indexterm>
+<para><computeroutput>ObjectOutputStream Client.oos<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1adab0599aef35d658a293db66512e03e1"/><section>
+    <title>ownId</title>
+<indexterm><primary>ownId</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>ownId</secondary></indexterm>
+<para><computeroutput>int Client.ownId<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1aa4df8ad8d5c10f4244c7fa8c79b354a3"/><section>
+    <title>protocoll</title>
+<indexterm><primary>protocoll</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>protocoll</secondary></indexterm>
+<para><computeroutput>Object [] Client.protocoll<computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Position blueprint for protocoll</title></formalpara>
+</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>Variable </para>
+</entry><entry>
+<para>Datatype  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>0 </para>
+</entry><entry>
+<para>out_message_type </para>
+</entry><entry>
+<para>int  </para>
+</entry></row>
+      <row >
+<entry>
+<para>1 </para>
+</entry><entry>
+<para>out_message_content </para>
+</entry><entry>
+<para>String  </para>
+</entry></row>
+      <row >
+<entry>
+<para>2 </para>
+</entry><entry>
+<para>out_message_time </para>
+</entry><entry>
+<para>String  </para>
+</entry></row>
+      <row >
+<entry>
+<para>3 </para>
+</entry><entry>
+<para>out_message_id </para>
+</entry><entry>
+<para>int  </para>
+</entry></row>
+      <row >
+<entry>
+<para>4 </para>
+</entry><entry>
+<para>out_room_selected </para>
+</entry><entry>
+<para>int  </para>
+</entry></row>
+      <row >
+<entry>
+<para>5 </para>
+</entry><entry>
+<para>out_room_newRoom </para>
+</entry><entry>
+<para>boolean  </para>
+</entry></row>
+      <row >
+<entry>
+<para>6 </para>
+</entry><entry>
+<para>out_room_delRoom<?linebreak?>=&gt; if out_room_selected doesn&apos;t equal -1 and out_room_delRoom equals true than delete the selected room </para>
+</entry><entry>
+<para>boolean </para>
+
+<para>&lt;/table </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+</section>
+<anchor xml:id="_class_client_1af946f07488c90f708481124e905b061c"/><section>
+    <title>rooms</title>
+<indexterm><primary>rooms</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>rooms</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_room">Room</link>&gt; Client.rooms<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1abed07f7395f4292d8d66947d8accd54d"/><section>
+    <title>selectedRoom</title>
+<indexterm><primary>selectedRoom</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>selectedRoom</secondary></indexterm>
+<para><computeroutput>int Client.selectedRoom<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1ab027fd30fbcbf03e5041dbbb11d9c661"/><section>
+    <title>send</title>
+<indexterm><primary>send</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>send</secondary></indexterm>
+<para><computeroutput>boolean Client.send<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a8e8a6328d58ae78542f29ae058f2b909"/><section>
+    <title>socket</title>
+<indexterm><primary>socket</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>socket</secondary></indexterm>
+<para><computeroutput>Socket Client.socket<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a4481a7e91060712f409c9c95d7bfba45"/><section>
+    <title>update</title>
+<indexterm><primary>update</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>update</secondary></indexterm>
+<para><computeroutput>boolean Client.update<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_client_1a3fd467d194cb9d7ec1c851b5c12f7989"/><section>
+    <title>users</title>
+<indexterm><primary>users</primary><secondary>Client</secondary></indexterm>
+<indexterm><primary>Client</primary><secondary>users</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_user">User</link>&gt; Client.users<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Felix Staacke/Downloads/v_2_12/src/<link linkend="__client_8java">Client.java</link></section>
+</section>

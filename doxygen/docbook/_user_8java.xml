@@ -1,0 +1,947 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__user_8java" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12/src/User.java File Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12/src/User.java</primary></indexterm>
+<para>
+
+<para>This class discribes the <link linkend="_class_user">User</link> data and contains the USer Socket and and executable protocolls. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_user">User</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class discribes the <link linkend="_class_user">User</link> data and contains the USer Socket and and executable protocolls. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Staacke, Felix </para>
+
+<para>the other student</para>
+</formalpara>
+ <formalpara><title>Method Overview</title></formalpara>
+</para>
+
+<para><?linebreak?> <informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row >
+<entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>Identity </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>visibility </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>return type </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>method name </para>
+</entry><entry style='border: 1px solid black; background-color: #6ec8f5;'>
+<para>note  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.User() </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user">User(int id, String username, String password)</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ac58ae55790a70d27312cbcebd3d74be2">User.hashPassword()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.hashPassword(password : String) </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a7f2808b54aa248f0cb55c054a517b4fd">User.getDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a7f2808b54aa248f0cb55c054a517b4fd">User.getDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method returns the current date in a String format.  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a0ddfb19f7a18a54a823630a19341fb9f">User.getTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a0ddfb19f7a18a54a823630a19341fb9f">User.getTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method returns the current time in a string format.  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a04c9b1223d6507da9eeec0b518bf6405">User.setIsOnline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.setIsOnline(socket:Socket, server:Server) </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method declares and initialises the both Threads <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. Than the method trys to copy the parameter-socket into the class-variable <link linkend="_class_user_1a3698f86316bcaaad6c1b927aabbf77ea">User.userSocket</link>. At last the method starts the two threads in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> and <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link> will run the method User.sendToUser(). <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link> will run the method <link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">User.receiveFromClient()</link>. Al last, this method calls the method User.setIsUpdate().  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a04c9b1223d6507da9eeec0b518bf6405">User.setIsOnline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a04c9b1223d6507da9eeec0b518bf6405">User.setIsOnline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>set the var <link linkend="_class_user_1a72e6f95652a9c28a176952c98a14c5dd">User.userIsOnline</link> true  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ad31fb44e6e337630cd17a14b9b3730d1">User.setIsOffline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ad31fb44e6e337630cd17a14b9b3730d1">User.setIsOffline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method interrupt the Thread userSender and userReceiver. Then the sockt connection to the client become closed.  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">User.receiveFromClient()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a12c1206a3c543b6d773c6d542ed52758">User.receiveFromClient()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method is saved as a lambda in <link linkend="_class_user_1ab37ba8cdad04bb4949d36cda9ad8a106">User.userSender</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll.</para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="5" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>math.-name </para>
+</entry><entry>
+<para>local var-name </para>
+</entry><entry>
+<para>datatype </para>
+</entry><entry>
+<para>discribtion </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(1) </para>
+</entry><entry>
+<para>i_0 </para>
+</entry><entry>
+<para>inNewRoom </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para>should a existing room become delted </para>
+</entry></row>
+      <row >
+<entry>
+<para>(2) </para>
+</entry><entry>
+<para>i_1 </para>
+</entry><entry>
+<para>inDelRoom </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(3) </para>
+</entry><entry>
+<para>i_2 </para>
+</entry><entry>
+<para>inDirChat </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para>should a direct chat become created </para>
+</entry></row>
+      <row >
+<entry>
+<para>(4) </para>
+</entry><entry>
+<para>i_3 </para>
+</entry><entry>
+<para>inDirAdrr </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>who should be adressed in direct chat </para>
+</entry></row>
+      <row >
+<entry>
+<para>(5) </para>
+</entry><entry>
+<para>i_4 </para>
+</entry><entry>
+<para>inSelRoom </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>content of message =&gt; text </para>
+</entry></row>
+      <row >
+<entry>
+<para>(6) </para>
+</entry><entry>
+<para>i_5 </para>
+</entry><entry>
+<para>inMsgCont </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>content of message </para>
+</entry></row>
+      <row >
+<entry>
+<para>(7) </para>
+</entry><entry>
+<para>i_6 </para>
+</entry><entry>
+<para>inMsgDisc </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>discribtion for a new <link linkend="_class_room">Room</link> </para>
+</entry></row>
+      <row >
+<entry>
+<para>(8) </para>
+</entry><entry>
+<para>i_7 </para>
+</entry><entry>
+<para>inMsgDate </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para>date of message </para>
+</entry></row>
+      <row >
+<entry>
+<para>(9) </para>
+</entry><entry>
+<para>i_8 </para>
+</entry><entry>
+<para>inMsgTime </para>
+</entry><entry>
+<para>String </para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>(10) </para>
+</entry><entry>
+<para>i_9 </para>
+</entry><entry>
+<para>inMsgUser </para>
+</entry><entry>
+<para>int </para>
+</entry><entry>
+<para>ownId of <link linkend="_class_user">User</link>  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para> <?linebreak?><?linebreak?></para>
+
+<para> <informaltable frame="all">
+    <tgroup cols="13" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+      <colspec colname='c6'/>
+      <colspec colname='c7'/>
+      <colspec colname='c8'/>
+      <colspec colname='c9'/>
+      <colspec colname='c10'/>
+      <colspec colname='c11'/>
+      <colspec colname='c12'/>
+      <colspec colname='c13'/>
+<thead>
+      <row >
+<entry>
+<para>operation mode </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>i_0 </para>
+</entry><entry>
+<para>i_1 </para>
+</entry><entry>
+<para>i_2 </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>i_3 </para>
+</entry><entry>
+<para>i_4 </para>
+</entry><entry>
+<para>i_5 </para>
+</entry><entry>
+<para>i_6 </para>
+</entry><entry>
+<para>i_7 </para>
+</entry><entry>
+<para>i_8 </para>
+</entry><entry>
+<para>i_9  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para></para>
+</entry></row>
+      <row >
+<entry>
+<para>direct Chat </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para></para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>1 </para>
+</entry><entry>
+<para>1  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para><formalpara><title>Legend:</title></formalpara>
+</para>
+
+<para><itemizedlist>
+<listitem>
+
+<para>for i_0 AND i_1 AND i_2: <itemizedlist>
+<listitem>
+
+<para>0 &lt;-&gt; must be false. </para>
+</listitem>
+<listitem>
+
+<para>1 &lt;-&gt; must be true. </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>for i_3 AND ... AND i_9: <itemizedlist>
+<listitem>
+
+<para>0 &lt;-&gt; value doesn&apos;t matter &lt;-&gt; value will not be safed. </para>
+</listitem>
+<listitem>
+
+<para>1 &lt;-&gt; value do matter &lt;-&gt; value will be safed. </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a9928d17b174137d3d4b8acb68f514bbf">User.sendToClient()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>private </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a9928d17b174137d3d4b8acb68f514bbf">User.sendToClient</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method is saved as a lambda in <link linkend="_class_user_1a75ae153d6897ca2d572987e0bcc230e5">User.userReceiver</link>. This method become called in <link linkend="_class_user_1ae3ae624521d9d151af08e29294b783fc">User.setIsOnline</link>. Data become received structured by following protocoll. <informaltable frame="all">
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<thead>
+      <row >
+<entry>
+<para>Pos. </para>
+</entry><entry>
+<para>Operation  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>(1) </para>
+</entry><entry>
+<para>check, if updated data are available  </para>
+</entry></row>
+      <row >
+<entry>
+<para>(2) </para>
+</entry><entry>
+<para>if yes, than do following <itemizedlist>
+<listitem>
+
+<para>send number of new rooms:int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per room: <itemizedlist>
+<listitem>
+
+<para>send the room title:String </para>
+</listitem>
+<listitem>
+
+<para>send the number of messages:int</para>
+
+<para><itemizedlist>
+<listitem>
+
+<para>send out_message_type:int </para>
+</listitem>
+<listitem>
+
+<para>send out_message_content:String </para>
+</listitem>
+<listitem>
+
+<para>send out_message_time:String </para>
+</listitem>
+<listitem>
+
+<para>send out_message_userId:int </para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para></para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+
+<para>send the number of users:int </para>
+</listitem>
+<listitem>
+
+<para>do in loop per every user: <itemizedlist>
+<listitem>
+
+<para>send username:String </para>
+</listitem>
+<listitem>
+
+<para>send isOnline:boolean </para>
+</listitem>
+<listitem>
+
+<para>send selectedRoom:int </para>
+</listitem>
+<listitem>
+
+<para>send password:String </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+
+<para></para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ab00a3725ff57fc30a3692ae62a04a28c">User.checkIdentity()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>boolean </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.checkIdentity(username : String, password String) </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>This method checks, if the entered login data equals the safed data.  </para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ae975e1fcd02e716e9ef51f79c259a2fb">User.getUsername()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ae975e1fcd02e716e9ef51f79c259a2fb">User.getUsername()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1adc0a352a5e5f804682d983191f45c524">User.getIsOnline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>boolean </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1adc0a352a5e5f804682d983191f45c524">User.getIsOnline()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a90ce0afdad0d42bd1c49c763bbc1be52">User.setUserIsKicked()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a90ce0afdad0d42bd1c49c763bbc1be52">User.setUserIsKicked()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.setUserIsBanned() </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.setUserIsBanned </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a32124ad2aee1ea0a409f56b770d6d82f">User.getIsBanned()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>boolean </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a32124ad2aee1ea0a409f56b770d6d82f">User.getIsBanned()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.getUserSelectedRoom() </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.getUserSelectedRoom() </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a77d0ba2972427793eb642b0594062acb">User.getUserKickCounter()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a77d0ba2972427793eb642b0594062acb">User.getUserKickCounter()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1af632bff30f08f3071fa4411f7ada25cd">User.getUserIdentity()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1af632bff30f08f3071fa4411f7ada25cd">User.getUserIdentity()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a9d965e3bcc3a207272c1e8d5dc9416eb">User.getHashedPassword()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>int </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a9d965e3bcc3a207272c1e8d5dc9416eb">User.getHashedPassword()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1abb07b7b27987a3da9da8a0f1bce6b969">User.getIsVerwarnt()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>boolean </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1abb07b7b27987a3da9da8a0f1bce6b969">User.getIsVerwarnt()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1aa9381e318df49c67e8c703848c0164a9">User.getIsKicked()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>boolean </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1aa9381e318df49c67e8c703848c0164a9">User.getIsKicked()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a79c1db56e87be54ac5b60acea7e089e2">User.getUserRegistrationDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a79c1db56e87be54ac5b60acea7e089e2">User.getUserRegistrationDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a0c5cd70aab3b240ec374eb00d0e9e2ac">User.getUserRegistrationTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a79c1db56e87be54ac5b60acea7e089e2">User.getUserRegistrationDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a5747db015828288696092c5355aca1d7">User.getUserLastLoginDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a5747db015828288696092c5355aca1d7">User.getUserLastLoginDate()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a1f3dda88d587340443fa2d0560592bfd">User.getUserLastLoginTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a1f3dda88d587340443fa2d0560592bfd">User.getUserLastLoginTime()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a42e5663ca72b56ac9e332b10fc675826">User.getUserIsBanned()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>String </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a42e5663ca72b56ac9e332b10fc675826">User.getUserIsBanned()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1a3fd081144eb72fa4dde91a4b7524cf1e">User.setUserIsVerwarned()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>pubic </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>void </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.setUserIsVerwarned(str : String) </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+</entry></row>
+      <row >
+<entry style='border-bottom: 2px solid black; postition: justify;'>
+<para><link linkend="_class_user_1ac888dac0c02e9d169f6f3767c23f334c">User.setUserSelectedRoom()</link> </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>public </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>none </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para>User.setUserSelectedRoom(ridx : int) </para>
+</entry><entry style='border-bottom: 2px solid black; postition: justify;'>
+<para></para>
+
+<para></para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+</section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2c0dece79a41fac667204ad364155260" xml:lang="en-US">
+<title>C:/Users/Felix Staacke/Downloads/v_2_12 Directory Reference</title>
+<indexterm><primary>C:/Users/Felix Staacke/Downloads/v_2_12 Directory Reference</primary></indexterm>
+Directory dependency graph for v_2_12:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2c0dece79a41fac667204ad364155260_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_850fca2ad528c3d7c88af5f43141fd93">src</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

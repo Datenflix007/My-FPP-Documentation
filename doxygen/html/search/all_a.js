@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['parsedirectchatcsv_0',['parseDirectChatCSV',['../class_my_file_handler.html#a368e92ce71c68c4d81a4f3ea93c6b517',1,'MyFileHandler']]],
+  ['parsedirectchatmessagecsv_1',['parseDirectChatMessageCSV',['../class_my_file_handler.html#afef7eeb2d302cf4deb2869a16adef7a4',1,'MyFileHandler']]],
+  ['parselogs_2',['parseLogs',['../class_my_file_handler.html#a1f017e50ce4333b979a2502e91f9d9e9',1,'MyFileHandler']]],
+  ['parsemessagecsv_3',['parseMessageCSV',['../class_my_file_handler.html#a804f9dfdf37a23d377fae5b99b3d913f',1,'MyFileHandler']]],
+  ['parseroomscsv_4',['parseRoomsCSV',['../class_my_file_handler.html#a096206c1d2c87a21c1b200951ad00e0d',1,'MyFileHandler']]],
+  ['parseservercfg_5',['parseServerCFG',['../class_my_file_handler.html#ac7bd05a7d85a63deee88c39c5b05ceae',1,'MyFileHandler']]],
+  ['parsesitzung_6',['parseSitzung',['../class_my_file_handler.html#aad3e6723dcaba8e5fe0df9203251d8b5',1,'MyFileHandler']]],
+  ['parseusercsv_7',['parseUserCSV',['../class_my_file_handler.html#a9873bc148eaa000ae94dc1a46b3f98a6',1,'MyFileHandler']]],
+  ['pathtodirectchat_8',['pathToDirectChat',['../class_server.html#a3ac21b03022fd98fa2d21642f8a11485',1,'Server']]],
+  ['pathtodirectmessage_9',['pathToDirectMessage',['../class_server.html#a6fbe8ed4d781a5e094873425ca7f3fb4',1,'Server']]],
+  ['pathtolog_10',['pathToLog',['../class_server.html#a1667baf6db7e0d934147395137b078ce',1,'Server']]],
+  ['pathtomessages_11',['pathToMessages',['../class_server.html#ad2abf417065e996b1230461e77dd4a3a',1,'Server']]],
+  ['pathtorooms_12',['pathToRooms',['../class_server.html#a9d8592da5641e48ebc2f1cc95430cd11',1,'Server']]],
+  ['pathtousers_13',['pathToUsers',['../class_server.html#a3bcd7adb60f2c930fc42479cfe319c66',1,'Server']]],
+  ['port_14',['port',['../class_server.html#a91db4267ecd6153ed655cabdf506b75e',1,'Server']]],
+  ['protocoll_15',['protocoll',['../class_client.html#aa4df8ad8d5c10f4244c7fa8c79b354a3',1,'Client']]]
+];

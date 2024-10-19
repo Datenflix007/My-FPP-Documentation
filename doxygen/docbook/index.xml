@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>My Project</title>
+    </info>
+    <xi:include href="todo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_direct_message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_log.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_my_file_handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_room.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_client_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_direct_chat_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_direct_message_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_log_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_message_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_my_file_handler_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_room_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_server_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_user_8java.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

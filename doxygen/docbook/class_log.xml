@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_log" xml:lang="en-US">
+<title>Log Class Reference</title>
+<indexterm><primary>Log</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>String <link linkend="_class_log_1a5c7bdcb0af71cf72ed158c6e4ebf3379">getContent</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_log_1ae832f6cfaa48b32a9532601493c17721">getDate</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_log_1ae30f651e9edc0ac452ce4a44940637d0">getRoll</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_log_1a6c355c014609830adcb2544cb4f9ff9f">getSitzung</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_log_1a9436da71378902ec2db86979856a8764">getTime</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_log_1a727ff1c290a01c3466a4563cd39f0b07">sitzung</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_log_1a4930c995b974473350df657ef05c8bee">date</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_log_1afca8533a0a555ff36688444438be457c">time</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_log_1a78f58515ef37dd3af9aecce955722242">roll</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_log_1a1ca6551566298445a7ae2a6ec8332e5a">content</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_log_1a5c7bdcb0af71cf72ed158c6e4ebf3379"/><section>
+    <title>getContent()</title>
+<indexterm><primary>getContent</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>getContent</secondary></indexterm>
+<para><computeroutput>String Log.getContent ( )</computeroutput></para></section>
+<anchor xml:id="_class_log_1ae832f6cfaa48b32a9532601493c17721"/><section>
+    <title>getDate()</title>
+<indexterm><primary>getDate</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>getDate</secondary></indexterm>
+<para><computeroutput>String Log.getDate ( )</computeroutput></para></section>
+<anchor xml:id="_class_log_1ae30f651e9edc0ac452ce4a44940637d0"/><section>
+    <title>getRoll()</title>
+<indexterm><primary>getRoll</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>getRoll</secondary></indexterm>
+<para><computeroutput>int Log.getRoll ( )</computeroutput></para></section>
+<anchor xml:id="_class_log_1a6c355c014609830adcb2544cb4f9ff9f"/><section>
+    <title>getSitzung()</title>
+<indexterm><primary>getSitzung</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>getSitzung</secondary></indexterm>
+<para><computeroutput>int Log.getSitzung ( )</computeroutput></para></section>
+<anchor xml:id="_class_log_1a9436da71378902ec2db86979856a8764"/><section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput>String Log.getTime ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_log_1a1ca6551566298445a7ae2a6ec8332e5a"/><section>
+    <title>content</title>
+<indexterm><primary>content</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>content</secondary></indexterm>
+<para><computeroutput>String Log.content<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_log_1a4930c995b974473350df657ef05c8bee"/><section>
+    <title>date</title>
+<indexterm><primary>date</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>date</secondary></indexterm>
+<para><computeroutput>String Log.date<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_log_1a78f58515ef37dd3af9aecce955722242"/><section>
+    <title>roll</title>
+<indexterm><primary>roll</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>roll</secondary></indexterm>
+<para><computeroutput>int Log.roll<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_log_1a727ff1c290a01c3466a4563cd39f0b07"/><section>
+    <title>sitzung</title>
+<indexterm><primary>sitzung</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>sitzung</secondary></indexterm>
+<para><computeroutput>int Log.sitzung<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_log_1afca8533a0a555ff36688444438be457c"/><section>
+    <title>time</title>
+<indexterm><primary>time</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>time</secondary></indexterm>
+<para><computeroutput>String Log.time<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Felix Staacke/Downloads/v_2_12/src/<link linkend="__log_8java">Log.java</link></section>
+</section>

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_room" xml:lang="en-US">
+<title>Room Class Reference</title>
+<indexterm><primary>Room</primary></indexterm>
+Collaboration diagram for Room:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_room__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_message">Message</link> <link linkend="_class_room_1af99b3c25ec65830c60dfc28af5ad8616">getMessage</link> (int <link linkend="_class_room_1a6cb232adce46bb356fbaf75b8d4f1667">idx</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_room_1ae1b6b9dbde135e5ec9f98ca76bcc6899">setMessageIsDeleted</link> (int <link linkend="_class_room_1a6cb232adce46bb356fbaf75b8d4f1667">idx</link>)</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_room_1a2ce33009a8594c5cc2e04e9aaaeeb0cf">getTitle</link> ()</para>
+</listitem>
+            <listitem><para>String <link linkend="_class_room_1a16e84feaf50c2672c3e124ad15ff316e">getDiscribtion</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_room_1a87d55a17c31081b88151f7df6c355b1f">getIdx</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_room_1aa45e1085b4beb0d09b91ba265b53c2f9">getNumOfMessages</link> ()</para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_message">Message</link> &gt; <link linkend="_class_room_1add159a4f24503b347f4df1ec9b920123">getMessages</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_room_1ac7d3435426a92fcaa6ecef5ee3c55230">setTitle</link> (String <link linkend="_class_room_1a1f231298ad7cbf4d6b4beb9b8b0aeafd">title</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_room_1afa49addb916b14cb8c443c8f963bfaef">setDiscribtion</link> (String <link linkend="_class_room_1a7bc869ddc526fffc42c904482ee4783a">discribtion</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_room_1ad8052775e3a48afe3b706777aedcce2b">setMessages</link> (ArrayList&lt; <link linkend="_class_message">Message</link> &gt; msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_room_1a7586d4ec04c371734075d3f2699c701f">addMessage</link> (<link linkend="_class_message">Message</link> message)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_room_1a6cb232adce46bb356fbaf75b8d4f1667">idx</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_room_1a1f231298ad7cbf4d6b4beb9b8b0aeafd">title</link></para>
+</listitem>
+            <listitem><para>String <link linkend="_class_room_1a7bc869ddc526fffc42c904482ee4783a">discribtion</link></para>
+</listitem>
+            <listitem><para>ArrayList&lt; <link linkend="_class_message">Message</link> &gt; <link linkend="_class_room_1abd99d3deac38bd4c472b57be7ceccdf5">messages</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this class contains two Constructors<?linebreak?> -&gt; <link linkend="_class_room">Room(String title, String discribtion)</link> =&gt; create a new <link linkend="_class_room">Room</link> in Runtime =&gt; no messages safed<?linebreak?> -&gt; <link linkend="_class_room">Room(String title, String discribtion, ArrayList&lt;Message&gt; messages)</link> =&gt; after running server load safed messages<?linebreak?> this class also contains message using methods<?linebreak?> -&gt; public <link linkend="_class_message">Message</link> <link linkend="_class_room_1af99b3c25ec65830c60dfc28af5ad8616">getMessage(int idx)</link><?linebreak?> -&gt; public void <link linkend="_class_room_1ae1b6b9dbde135e5ec9f98ca76bcc6899">setMessageIsDeleted(int idx)</link><?linebreak?> this class also contains getter and setter methods for the attributes title and discribion<?linebreak?> -&gt; public String <link linkend="_class_room_1a2ce33009a8594c5cc2e04e9aaaeeb0cf">getTitle()</link><?linebreak?> -&gt; public String <link linkend="_class_room_1a16e84feaf50c2672c3e124ad15ff316e">getDiscribtion()</link><?linebreak?> -&gt; public int <link linkend="_class_room_1a87d55a17c31081b88151f7df6c355b1f">getIdx()</link><?linebreak?> -&gt; public void <link linkend="_class_room_1ac7d3435426a92fcaa6ecef5ee3c55230">setTitle(String title)</link><?linebreak?> -&gt; public void <link linkend="_class_room_1afa49addb916b14cb8c443c8f963bfaef">setDiscribtion(String discribtion)</link><?linebreak?><?linebreak?> HINT: this class only contains getter and setter methods. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_room_1a7586d4ec04c371734075d3f2699c701f"/><section>
+    <title>addMessage()</title>
+<indexterm><primary>addMessage</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>addMessage</secondary></indexterm>
+<para><computeroutput>void Room.addMessage (<link linkend="_class_message">Message</link> message)</computeroutput></para></section>
+<anchor xml:id="_class_room_1a16e84feaf50c2672c3e124ad15ff316e"/><section>
+    <title>getDiscribtion()</title>
+<indexterm><primary>getDiscribtion</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getDiscribtion</secondary></indexterm>
+<para><computeroutput>String Room.getDiscribtion ( )</computeroutput></para></section>
+<anchor xml:id="_class_room_1a87d55a17c31081b88151f7df6c355b1f"/><section>
+    <title>getIdx()</title>
+<indexterm><primary>getIdx</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getIdx</secondary></indexterm>
+<para><computeroutput>int Room.getIdx ( )</computeroutput></para></section>
+<anchor xml:id="_class_room_1af99b3c25ec65830c60dfc28af5ad8616"/><section>
+    <title>getMessage()</title>
+<indexterm><primary>getMessage</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getMessage</secondary></indexterm>
+<para><computeroutput><link linkend="_class_message">Message</link> Room.getMessage (int idx)</computeroutput></para></section>
+<anchor xml:id="_class_room_1add159a4f24503b347f4df1ec9b920123"/><section>
+    <title>getMessages()</title>
+<indexterm><primary>getMessages</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getMessages</secondary></indexterm>
+<para><computeroutput>ArrayList&lt; <link linkend="_class_message">Message</link> &gt; Room.getMessages ( )</computeroutput></para></section>
+<anchor xml:id="_class_room_1aa45e1085b4beb0d09b91ba265b53c2f9"/><section>
+    <title>getNumOfMessages()</title>
+<indexterm><primary>getNumOfMessages</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getNumOfMessages</secondary></indexterm>
+<para><computeroutput>int Room.getNumOfMessages ( )</computeroutput></para></section>
+<anchor xml:id="_class_room_1a2ce33009a8594c5cc2e04e9aaaeeb0cf"/><section>
+    <title>getTitle()</title>
+<indexterm><primary>getTitle</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>getTitle</secondary></indexterm>
+<para><computeroutput>String Room.getTitle ( )</computeroutput></para></section>
+<anchor xml:id="_class_room_1afa49addb916b14cb8c443c8f963bfaef"/><section>
+    <title>setDiscribtion()</title>
+<indexterm><primary>setDiscribtion</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>setDiscribtion</secondary></indexterm>
+<para><computeroutput>void Room.setDiscribtion (String discribtion)</computeroutput></para></section>
+<anchor xml:id="_class_room_1ae1b6b9dbde135e5ec9f98ca76bcc6899"/><section>
+    <title>setMessageIsDeleted()</title>
+<indexterm><primary>setMessageIsDeleted</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>setMessageIsDeleted</secondary></indexterm>
+<para><computeroutput>void Room.setMessageIsDeleted (int idx)</computeroutput></para></section>
+<anchor xml:id="_class_room_1ad8052775e3a48afe3b706777aedcce2b"/><section>
+    <title>setMessages()</title>
+<indexterm><primary>setMessages</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>setMessages</secondary></indexterm>
+<para><computeroutput>void Room.setMessages (ArrayList&lt; <link linkend="_class_message">Message</link> &gt; msg)</computeroutput></para></section>
+<anchor xml:id="_class_room_1ac7d3435426a92fcaa6ecef5ee3c55230"/><section>
+    <title>setTitle()</title>
+<indexterm><primary>setTitle</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>setTitle</secondary></indexterm>
+<para><computeroutput>void Room.setTitle (String title)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_room_1a7bc869ddc526fffc42c904482ee4783a"/><section>
+    <title>discribtion</title>
+<indexterm><primary>discribtion</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>discribtion</secondary></indexterm>
+<para><computeroutput>String Room.discribtion<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_room_1a6cb232adce46bb356fbaf75b8d4f1667"/><section>
+    <title>idx</title>
+<indexterm><primary>idx</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>idx</secondary></indexterm>
+<para><computeroutput>int Room.idx<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_room_1abd99d3deac38bd4c472b57be7ceccdf5"/><section>
+    <title>messages</title>
+<indexterm><primary>messages</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>messages</secondary></indexterm>
+<para><computeroutput>ArrayList&lt;<link linkend="_class_message">Message</link>&gt; Room.messages<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_room_1a1f231298ad7cbf4d6b4beb9b8b0aeafd"/><section>
+    <title>title</title>
+<indexterm><primary>title</primary><secondary>Room</secondary></indexterm>
+<indexterm><primary>Room</primary><secondary>title</secondary></indexterm>
+<para><computeroutput>String Room.title<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/Felix Staacke/Downloads/v_2_12/src/<link linkend="__room_8java">Room.java</link></section>
+</section>
