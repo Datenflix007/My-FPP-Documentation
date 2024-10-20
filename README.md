@@ -8,7 +8,7 @@ how to quickstart the application:
 
 how to start the application with an IDE:
     - open projekt dictionary with IDE
-    - than replace in Server in line 651 the line through "withIDE = true;" 
+    - than replace in src/Server.java in line 651 the line through "withIDE = true;" 
 
 how to watch the project documentation:
      - open doxygen/html/index.html
