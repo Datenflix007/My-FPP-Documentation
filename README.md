@@ -2,9 +2,15 @@
      README
 ##################
 
-how to quickstart the application:
+how to quickstart the application with the batch file:
     - to start the Server: click on buildServer.bat
     - to start the Client: click on builtClient.bat
+    HINT: this kind of starting includs a new compiling on new device.
+
+how to quickstart the application with .jar files:
+    - Change dictionary folder classes/
+    - to start Server execute Server.jar
+    - to start Client execute Client.jar
 
 how to start the application with an IDE:
     - open projekt dictionary with IDE
